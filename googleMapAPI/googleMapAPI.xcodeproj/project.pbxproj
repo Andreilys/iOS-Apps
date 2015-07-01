@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		271DA71B1B43910000775175 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 271DA71A1B43910000775175 /* main.m */; };
+		271DA71E1B43910000775175 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 271DA71D1B43910000775175 /* AppDelegate.m */; };
+		271DA7211B43910000775175 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271DA7201B43910000775175 /* ViewController.m */; };
+		271DA7241B43910000775175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271DA7221B43910000775175 /* Main.storyboard */; };
+		271DA7261B43910000775175 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271DA7251B43910000775175 /* Images.xcassets */; };
+		271DA7291B43910000775175 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271DA7271B43910000775175 /* LaunchScreen.xib */; };
+		271DA7351B43910100775175 /* googleMapAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271DA7341B43910100775175 /* googleMapAPITests.m */; };
+		C57F9C9680B4E02D94C68D77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A9613D4FC446BF97217EC3 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		271DA72F1B43910100775175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 271DA70D1B43910000775175 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 271DA7141B43910000775175;
+			remoteInfo = googleMapAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		271DA7151B43910000775175 /* googleMapAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = googleMapAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		271DA7191B43910000775175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		271DA71A1B43910000775175 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		271DA71C1B43910000775175 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		271DA71D1B43910000775175 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		271DA71F1B43910000775175 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		271DA7201B43910000775175 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		271DA7231B43910000775175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		271DA7251B43910000775175 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		271DA7281B43910000775175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		271DA72E1B43910100775175 /* googleMapAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = googleMapAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		271DA7331B43910100775175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		271DA7341B43910100775175 /* googleMapAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = googleMapAPITests.m; sourceTree = "<group>"; };
+		B6A9613D4FC446BF97217EC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75EA549BBD266DA815ABEE6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FD3CB5ECF1FB2B2C6E71F5CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		271DA7121B43910000775175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57F9C9680B4E02D94C68D77 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271DA72B1B43910100775175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		271DA70C1B43910000775175 = {
+			isa = PBXGroup;
+			children = (
+				271DA7171B43910000775175 /* googleMapAPI */,
+				271DA7311B43910100775175 /* googleMapAPITests */,
+				271DA7161B43910000775175 /* Products */,
+				A3BE444B6E9779A983CA1ACC /* Pods */,
+				4C03F404F755A109D05CA2D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		271DA7161B43910000775175 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				271DA7151B43910000775175 /* googleMapAPI.app */,
+				271DA72E1B43910100775175 /* googleMapAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		271DA7171B43910000775175 /* googleMapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				271DA71C1B43910000775175 /* AppDelegate.h */,
+				271DA71D1B43910000775175 /* AppDelegate.m */,
+				271DA71F1B43910000775175 /* ViewController.h */,
+				271DA7201B43910000775175 /* ViewController.m */,
+				271DA7221B43910000775175 /* Main.storyboard */,
+				271DA7251B43910000775175 /* Images.xcassets */,
+				271DA7271B43910000775175 /* LaunchScreen.xib */,
+				271DA7181B43910000775175 /* Supporting Files */,
+			);
+			path = googleMapAPI;
+			sourceTree = "<group>";
+		};
+		271DA7181B43910000775175 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				271DA7191B43910000775175 /* Info.plist */,
+				271DA71A1B43910000775175 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		271DA7311B43910100775175 /* googleMapAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				271DA7341B43910100775175 /* googleMapAPITests.m */,
+				271DA7321B43910100775175 /* Supporting Files */,
+			);
+			path = googleMapAPITests;
+			sourceTree = "<group>";
+		};
+		271DA7321B43910100775175 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				271DA7331B43910100775175 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C03F404F755A109D05CA2D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6A9613D4FC446BF97217EC3 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3BE444B6E9779A983CA1ACC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D75EA549BBD266DA815ABEE6 /* Pods.debug.xcconfig */,
+				FD3CB5ECF1FB2B2C6E71F5CF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		271DA7141B43910000775175 /* googleMapAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 271DA7381B43910100775175 /* Build configuration list for PBXNativeTarget "googleMapAPI" */;
+			buildPhases = (
+				F29CE4460A0D475AD5753257 /* Check Pods Manifest.lock */,
+				271DA7111B43910000775175 /* Sources */,
+				271DA7121B43910000775175 /* Frameworks */,
+				271DA7131B43910000775175 /* Resources */,
+				FD18D3ECCD90CFD31515906F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = googleMapAPI;
+			productName = googleMapAPI;
+			productReference = 271DA7151B43910000775175 /* googleMapAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		271DA72D1B43910100775175 /* googleMapAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 271DA73B1B43910100775175 /* Build configuration list for PBXNativeTarget "googleMapAPITests" */;
+			buildPhases = (
+				271DA72A1B43910100775175 /* Sources */,
+				271DA72B1B43910100775175 /* Frameworks */,
+				271DA72C1B43910100775175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				271DA7301B43910100775175 /* PBXTargetDependency */,
+			);
+			name = googleMapAPITests;
+			productName = googleMapAPITests;
+			productReference = 271DA72E1B43910100775175 /* googleMapAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		271DA70D1B43910000775175 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Andrei;
+				TargetAttributes = {
+					271DA7141B43910000775175 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					271DA72D1B43910100775175 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 271DA7141B43910000775175;
+					};
+				};
+			};
+			buildConfigurationList = 271DA7101B43910000775175 /* Build configuration list for PBXProject "googleMapAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 271DA70C1B43910000775175;
+			productRefGroup = 271DA7161B43910000775175 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				271DA7141B43910000775175 /* googleMapAPI */,
+				271DA72D1B43910100775175 /* googleMapAPITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		271DA7131B43910000775175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271DA7241B43910000775175 /* Main.storyboard in Resources */,
+				271DA7291B43910000775175 /* LaunchScreen.xib in Resources */,
+				271DA7261B43910000775175 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271DA72C1B43910100775175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F29CE4460A0D475AD5753257 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD18D3ECCD90CFD31515906F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		271DA7111B43910000775175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271DA7211B43910000775175 /* ViewController.m in Sources */,
+				271DA71E1B43910000775175 /* AppDelegate.m in Sources */,
+				271DA71B1B43910000775175 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271DA72A1B43910100775175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271DA7351B43910100775175 /* googleMapAPITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		271DA7301B43910100775175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 271DA7141B43910000775175 /* googleMapAPI */;
+			targetProxy = 271DA72F1B43910100775175 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		271DA7221B43910000775175 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271DA7231B43910000775175 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		271DA7271B43910000775175 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271DA7281B43910000775175 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		271DA7361B43910100775175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		271DA7371B43910100775175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		271DA7391B43910100775175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75EA549BBD266DA815ABEE6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = googleMapAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		271DA73A1B43910100775175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD3CB5ECF1FB2B2C6E71F5CF /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = googleMapAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		271DA73C1B43910100775175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = googleMapAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/googleMapAPI.app/googleMapAPI";
+			};
+			name = Debug;
+		};
+		271DA73D1B43910100775175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = googleMapAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/googleMapAPI.app/googleMapAPI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		271DA7101B43910000775175 /* Build configuration list for PBXProject "googleMapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271DA7361B43910100775175 /* Debug */,
+				271DA7371B43910100775175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		271DA7381B43910100775175 /* Build configuration list for PBXNativeTarget "googleMapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271DA7391B43910100775175 /* Debug */,
+				271DA73A1B43910100775175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		271DA73B1B43910100775175 /* Build configuration list for PBXNativeTarget "googleMapAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271DA73C1B43910100775175 /* Debug */,
+				271DA73D1B43910100775175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 271DA70D1B43910000775175 /* Project object */;
+}
