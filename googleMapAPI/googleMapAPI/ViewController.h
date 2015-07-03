@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@import GoogleMaps;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <GMSMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *gMapsView;
+@property (nonatomic, strong) IBOutlet GMSMapView *mapView;
+@property (nonatomic, strong) IBOutlet GMSCameraPosition *camera;
 
 @end
 
