@@ -24,8 +24,10 @@
     [Parse setApplicationId:@"kmuJk020XowKlQ3diY1RTdvG89p9cNUIhmk49G2T"
                   clientKey:@"AB3A1xI9sOu03r69oiZBIVERXd6cjIvKjxhTeaUI"];
     
+        
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     
     return YES;
 }

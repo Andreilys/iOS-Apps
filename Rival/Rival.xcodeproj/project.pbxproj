@@ -14,6 +14,7 @@
 		271D59E21B44D1A8001CDE9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271D59E01B44D1A8001CDE9B /* LaunchScreen.xib */; };
 		271D59EE1B44D1A8001CDE9B /* RivalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271D59ED1B44D1A8001CDE9B /* RivalTests.m */; };
 		271D59F81B44D1CB001CDE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271D59F71B44D1CB001CDE9B /* Main.storyboard */; };
+		274741A11B47885E00C31B17 /* RivalsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274741A01B47885E00C31B17 /* RivalsTableView.m */; };
 		27978C281B44D9E1008F0ECD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27978C261B44D9E1008F0ECD /* Bolts.framework */; };
 		27978C291B44D9E1008F0ECD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27978C261B44D9E1008F0ECD /* Bolts.framework */; };
 		27978C2A1B44D9E1008F0ECD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27978C271B44D9E1008F0ECD /* Parse.framework */; };
@@ -57,8 +58,10 @@
 		271D59EC1B44D1A8001CDE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271D59ED1B44D1A8001CDE9B /* RivalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RivalTests.m; sourceTree = "<group>"; };
 		271D59F71B44D1CB001CDE9B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		271D5A021B44D2F8001CDE9B /* Rival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Rival.app; path = "/Users/antpgomes/Google Drive/iOS Apps/Rival/build/Debug-iphoneos/Rival.app"; sourceTree = "<absolute>"; };
-		271D5A041B44D2F8001CDE9B /* RivalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RivalTests.xctest; path = "/Users/antpgomes/Google Drive/iOS Apps/Rival/build/Debug-iphoneos/RivalTests.xctest"; sourceTree = "<absolute>"; };
+		2747419D1B4772BA00C31B17 /* Rival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rival.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2747419E1B4772BA00C31B17 /* RivalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RivalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2747419F1B47885E00C31B17 /* RivalsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RivalsTableView.h; sourceTree = "<group>"; };
+		274741A01B47885E00C31B17 /* RivalsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RivalsTableView.m; sourceTree = "<group>"; };
 		27978C261B44D9E1008F0ECD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		27978C271B44D9E1008F0ECD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		27978C2C1B44DA15008F0ECD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				271D59D01B44D1A8001CDE9B /* Rival */,
 				271D59EA1B44D1A8001CDE9B /* RivalTests */,
 				271D59FA1B44D2E3001CDE9B /* Frameworks */,
+				2747419D1B4772BA00C31B17 /* Rival.app */,
+				2747419E1B4772BA00C31B17 /* RivalTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +135,8 @@
 				271D59D81B44D1A8001CDE9B /* ViewController.h */,
 				271D59D91B44D1A8001CDE9B /* ViewController.m */,
 				271D59F71B44D1CB001CDE9B /* Main.storyboard */,
+				2747419F1B47885E00C31B17 /* RivalsTableView.h */,
+				274741A01B47885E00C31B17 /* RivalsTableView.m */,
 				27978C421B44DC16008F0ECD /* registerViewController.h */,
 				27978C431B44DC16008F0ECD /* registerViewController.m */,
 				271D59DE1B44D1A8001CDE9B /* Images.xcassets */,
@@ -203,7 +210,7 @@
 			);
 			name = Rival;
 			productName = Rival;
-			productReference = 271D5A021B44D2F8001CDE9B /* Rival.app */;
+			productReference = 2747419D1B4772BA00C31B17 /* Rival.app */;
 			productType = "com.apple.product-type.application";
 		};
 		271D59E61B44D1A8001CDE9B /* RivalTests */ = {
@@ -221,7 +228,7 @@
 			);
 			name = RivalTests;
 			productName = RivalTests;
-			productReference = 271D5A041B44D2F8001CDE9B /* RivalTests.xctest */;
+			productReference = 2747419E1B4772BA00C31B17 /* RivalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -290,6 +297,7 @@
 				271D59D71B44D1A8001CDE9B /* AppDelegate.m in Sources */,
 				271D59D41B44D1A8001CDE9B /* main.m in Sources */,
 				27978C441B44DC16008F0ECD /* registerViewController.m in Sources */,
+				274741A11B47885E00C31B17 /* RivalsTableView.m in Sources */,
 				27978C4C1B44E37A008F0ECD /* NSString+FormValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

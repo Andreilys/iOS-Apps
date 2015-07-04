@@ -18,56 +18,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+// Do any additional setup after loading the view, typically from a nib.
 }
 
+
+//whenever login button is pressed
 - (IBAction)loginButtonPressed:(id)sender {
-    NSString *errorMessage = [self validateForm];
-    if (errorMessage) {
-        [[[UIAlertView alloc] initWithTitle:nil message:errorMessage delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+       __block NSString *errorMessage;
+    //launch the validate form to make sure what the user entered makes sense
+    
+    [PFUser logInWithUsernameInBackground:self.userTextField.text
+                                 password:self.passwordTextField.text block:^(PFUser *user, NSError *error)
+     
+     {
+         if (!error) {
+             [self performSegueWithIdentifier:@"showRivals" sender:nil];
+         } else {
+             [[[UIAlertView alloc] initWithTitle:nil message:@"Username or Password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+             
+         }
+     }];
+
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        NSLog(@"works");
+        [self performSegueWithIdentifier:@"showRivals" sender:nil];
+        
+    } else {
+        NSLog(@"nope");
         return;
     }
     
-    
-
-    
-    [self performSegueWithIdentifier:@"showRivals" sender:self];
-    
 }
-
-- (NSString *)validateForm {
-    NSString *errorMessage;
-    NSString *user = self.userTextField.text;
-    NSString *password = self.passwordTextField.text;
-    PFQuery *query = [PFQuery queryWithClassName:@"user"];
-    [query whereKey:@"username" equalTo:user];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                NSLog(@"%@", object.objectId);
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    
-    
-    if ([self.userTextField.text isValidName]){
-        errorMessage = @"Please enter a valid username";
-    } else if (![self.passwordTextField.text isValidPassword]){
-        errorMessage = @"Please enter a valid password longer than 5 characters.";
-    }
-    
-    
-return errorMessage;
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

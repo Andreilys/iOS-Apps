@@ -13,30 +13,36 @@
 
 @implementation registerViewController
 
+
 - (IBAction)registerButtonPressed:(id)sender {
+    //need to validate to make sure what the user entered is correct
     NSString *errorMessage = [self validateForm];
     if (errorMessage) {
+        //pop up the alert view if it doesn't work
         [[[UIAlertView alloc] initWithTitle:nil message:errorMessage delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
         return;
     }
     
-    NSDictionary *formValues = @{ @"username" : self.userTextField.text,
-                                  @"email" : self.emailTextfield.text,
-                                  @"password" : self.passwordTextField.text};
+    PFUser *user = [PFUser user];
+    user.username = self.userTextField.text;
+    user.password = self.passwordTextField.text;
+    user.email = self.emailTextfield.text;
     
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {   // Hooray! Let them use the app now.
+        } else {   NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
+        }
+    }];
     
-    //adding the user to the parse database
-    PFObject *user = [PFObject objectWithClassName:@"User"];
-    user[@"username"] = (@"%@", formValues[@"username"]);
-    user[@"email"] = (@"%@", formValues[@"email"]);
-    user[@"password"] = (@"%@", formValues[@"password"]);
-    [user saveInBackground];
-    
-    
+    //perform segue
     [self performSegueWithIdentifier:@"newView" sender:self];
     
 }
 
+
+
+
+//double check to see what the person entered makes sense
 - (NSString *)validateForm {
     NSString *errorMessage;
     UITextField *viewWithError;

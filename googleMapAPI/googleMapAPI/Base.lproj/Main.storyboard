@@ -27,15 +27,20 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="lkK-sH-jBu" secondAttribute="centerY" constant="48" id="zUa-aB-Qnw"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bvZ-dq-16x" appends="YES" id="r23-PV-qpF"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="gMapsView" destination="bza-wA-x3b" id="kbU-kO-ewB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bvZ-dq-16x"/>
             </objects>
         </scene>
     </scenes>
