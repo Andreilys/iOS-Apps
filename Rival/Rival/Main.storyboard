@@ -134,16 +134,18 @@
             <objects>
                 <tableViewController id="TNn-6a-aHd" customClass="RivalsTableView" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="H4g-GQ-c88">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <tabBar key="tableFooterView" contentMode="scaleToFill" id="1qf-C9-riC">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                            <rect key="frame" x="0.0" y="716" width="414" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <items>
-                                <tabBarItem systemItem="favorites" id="wdE-1a-oZ5"/>
-                                <tabBarItem systemItem="more" id="Mig-cl-mX2"/>
+                                <tabBarItem title="Challenge Wall" selectedImage="Button 4-1" id="wdE-1a-oZ5">
+                                    <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                </tabBarItem>
+                                <tabBarItem title="Challenge Someone" id="Mig-cl-mX2"/>
                             </items>
                         </tabBar>
                         <sections>
@@ -235,7 +237,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvV-Aq-ruq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
