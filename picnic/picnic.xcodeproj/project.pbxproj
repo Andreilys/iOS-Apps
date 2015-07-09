@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27364C2F1B4E087400763CAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27364C2E1B4E087400763CAD /* main.m */; };
+		27364C321B4E087400763CAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27364C311B4E087400763CAD /* AppDelegate.m */; };
+		27364C351B4E087400763CAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27364C341B4E087400763CAD /* ViewController.m */; };
+		27364C381B4E087400763CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27364C361B4E087400763CAD /* Main.storyboard */; };
+		27364C3A1B4E087400763CAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27364C391B4E087400763CAD /* Images.xcassets */; };
+		27364C3D1B4E087400763CAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27364C3B1B4E087400763CAD /* LaunchScreen.xib */; };
+		27364C491B4E087400763CAD /* picnicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27364C481B4E087400763CAD /* picnicTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27364C431B4E087400763CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27364C211B4E087400763CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27364C281B4E087400763CAD;
+			remoteInfo = picnic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27364C291B4E087400763CAD /* picnic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picnic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27364C2D1B4E087400763CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27364C2E1B4E087400763CAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27364C301B4E087400763CAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27364C311B4E087400763CAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27364C331B4E087400763CAD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		27364C341B4E087400763CAD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27364C371B4E087400763CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27364C391B4E087400763CAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27364C3C1B4E087400763CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		27364C421B4E087400763CAD /* picnicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = picnicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27364C471B4E087400763CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27364C481B4E087400763CAD /* picnicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = picnicTests.m; sourceTree = "<group>"; };
+		27364C521B4E08E900763CAD /* squish.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = squish.caf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27364C261B4E087400763CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27364C3F1B4E087400763CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27364C201B4E087400763CAD = {
+			isa = PBXGroup;
+			children = (
+				27364C2B1B4E087400763CAD /* picnic */,
+				27364C451B4E087400763CAD /* picnicTests */,
+				27364C2A1B4E087400763CAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27364C2A1B4E087400763CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27364C291B4E087400763CAD /* picnic.app */,
+				27364C421B4E087400763CAD /* picnicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27364C2B1B4E087400763CAD /* picnic */ = {
+			isa = PBXGroup;
+			children = (
+				27364C521B4E08E900763CAD /* squish.caf */,
+				27364C301B4E087400763CAD /* AppDelegate.h */,
+				27364C311B4E087400763CAD /* AppDelegate.m */,
+				27364C331B4E087400763CAD /* ViewController.h */,
+				27364C341B4E087400763CAD /* ViewController.m */,
+				27364C361B4E087400763CAD /* Main.storyboard */,
+				27364C391B4E087400763CAD /* Images.xcassets */,
+				27364C3B1B4E087400763CAD /* LaunchScreen.xib */,
+				27364C2C1B4E087400763CAD /* Supporting Files */,
+			);
+			path = picnic;
+			sourceTree = "<group>";
+		};
+		27364C2C1B4E087400763CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27364C2D1B4E087400763CAD /* Info.plist */,
+				27364C2E1B4E087400763CAD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27364C451B4E087400763CAD /* picnicTests */ = {
+			isa = PBXGroup;
+			children = (
+				27364C481B4E087400763CAD /* picnicTests.m */,
+				27364C461B4E087400763CAD /* Supporting Files */,
+			);
+			path = picnicTests;
+			sourceTree = "<group>";
+		};
+		27364C461B4E087400763CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27364C471B4E087400763CAD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27364C281B4E087400763CAD /* picnic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27364C4C1B4E087400763CAD /* Build configuration list for PBXNativeTarget "picnic" */;
+			buildPhases = (
+				27364C251B4E087400763CAD /* Sources */,
+				27364C261B4E087400763CAD /* Frameworks */,
+				27364C271B4E087400763CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = picnic;
+			productName = picnic;
+			productReference = 27364C291B4E087400763CAD /* picnic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27364C411B4E087400763CAD /* picnicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27364C4F1B4E087400763CAD /* Build configuration list for PBXNativeTarget "picnicTests" */;
+			buildPhases = (
+				27364C3E1B4E087400763CAD /* Sources */,
+				27364C3F1B4E087400763CAD /* Frameworks */,
+				27364C401B4E087400763CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27364C441B4E087400763CAD /* PBXTargetDependency */,
+			);
+			name = picnicTests;
+			productName = picnicTests;
+			productReference = 27364C421B4E087400763CAD /* picnicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27364C211B4E087400763CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Andrei;
+				TargetAttributes = {
+					27364C281B4E087400763CAD = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					27364C411B4E087400763CAD = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 27364C281B4E087400763CAD;
+					};
+				};
+			};
+			buildConfigurationList = 27364C241B4E087400763CAD /* Build configuration list for PBXProject "picnic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27364C201B4E087400763CAD;
+			productRefGroup = 27364C2A1B4E087400763CAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27364C281B4E087400763CAD /* picnic */,
+				27364C411B4E087400763CAD /* picnicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27364C271B4E087400763CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27364C381B4E087400763CAD /* Main.storyboard in Resources */,
+				27364C3D1B4E087400763CAD /* LaunchScreen.xib in Resources */,
+				27364C3A1B4E087400763CAD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27364C401B4E087400763CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27364C251B4E087400763CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27364C351B4E087400763CAD /* ViewController.m in Sources */,
+				27364C321B4E087400763CAD /* AppDelegate.m in Sources */,
+				27364C2F1B4E087400763CAD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27364C3E1B4E087400763CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27364C491B4E087400763CAD /* picnicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27364C441B4E087400763CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27364C281B4E087400763CAD /* picnic */;
+			targetProxy = 27364C431B4E087400763CAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27364C361B4E087400763CAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27364C371B4E087400763CAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27364C3B1B4E087400763CAD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27364C3C1B4E087400763CAD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27364C4A1B4E087400763CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27364C4B1B4E087400763CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27364C4D1B4E087400763CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = picnic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27364C4E1B4E087400763CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = picnic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		27364C501B4E087400763CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = picnicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/picnic.app/picnic";
+			};
+			name = Debug;
+		};
+		27364C511B4E087400763CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = picnicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/picnic.app/picnic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27364C241B4E087400763CAD /* Build configuration list for PBXProject "picnic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27364C4A1B4E087400763CAD /* Debug */,
+				27364C4B1B4E087400763CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27364C4C1B4E087400763CAD /* Build configuration list for PBXNativeTarget "picnic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27364C4D1B4E087400763CAD /* Debug */,
+				27364C4E1B4E087400763CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27364C4F1B4E087400763CAD /* Build configuration list for PBXNativeTarget "picnicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27364C501B4E087400763CAD /* Debug */,
+				27364C511B4E087400763CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27364C211B4E087400763CAD /* Project object */;
+}
