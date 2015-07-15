@@ -1,0 +1,26 @@
+Important/Must need:
+Background for the 4 different categories
+logo+name for the app
+ability to upvote/downvote different supplements
+submission (and ability to pull from a database the information on the submission)
+ability to pull and show the information
+save a supplement to favorites
+create journal entries
+store and pull journal entries
+
+Nice to have:
+
+Step 0:
+Create wireframes with POP
+
+Step 1:
+Create the submission page, and have it deposit all the information to Parse
+
+Step 2:
+create the unique view cell that will populate table view controller
+
+Step 3:
+Table view should be able to pull info from Parse and display
+
+Step 4:
+Be able to check out more info, upvote, downvote
