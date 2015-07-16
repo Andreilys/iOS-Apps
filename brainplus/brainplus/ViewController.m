@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Parse/Parse.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *pic1;
 
 @end
 
