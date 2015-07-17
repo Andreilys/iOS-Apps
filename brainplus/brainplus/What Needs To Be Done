@@ -10,17 +10,34 @@ store and pull journal entries
 
 Nice to have:
 
-Step 0:
+Step 0: DONE
 Create wireframes with POP
 
-Step 1:
+Step 1: DONE
 Create the submission page, and have it deposit all the information to Parse
 
-Step 2:
+Step 2: DONE
 create the unique view cell that will populate table view controller
 
-Step 3:
+Step 3: DONE
 Table view should be able to pull info from Parse and display
 
-Step 4:
-Be able to check out more info, upvote, downvote
+Step 4: UNFINISHED
+-Rearrange the cells based on the vote score
+
+Step 5:
+Store in Parse the vote score, and be able to pull it to display
+
+Step 6:
+Create the favorites page
+
+Step 7:
+Create the journals page
+
+Step 8:
+UI/UX Work
+
+
+Bugs:
+Doesn't load after submission is submitted
+make tableview scrollable

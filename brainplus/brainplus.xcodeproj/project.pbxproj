@@ -28,6 +28,9 @@
 		2778CC471B57384400AE9C59 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2778CC461B57384400AE9C59 /* libz.dylib */; };
 		2778CC491B57384B00AE9C59 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2778CC481B57384B00AE9C59 /* libsqlite3.dylib */; };
 		2778CC4C1B57396000AE9C59 /* SubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC4B1B57396000AE9C59 /* SubmissionViewController.m */; };
+		2778CC811B58A5CD00AE9C59 /* NootropicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */; };
+		2778CC841B58BF2300AE9C59 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC831B58BF2300AE9C59 /* DetailedViewController.m */; };
+		2778CC871B58FFED00AE9C59 /* CCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC861B58FFED00AE9C59 /* CCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,12 @@
 		2778CC481B57384B00AE9C59 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		2778CC4A1B57396000AE9C59 /* SubmissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionViewController.h; sourceTree = "<group>"; };
 		2778CC4B1B57396000AE9C59 /* SubmissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionViewController.m; sourceTree = "<group>"; };
+		2778CC7F1B58A5CD00AE9C59 /* NootropicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NootropicTableViewController.h; sourceTree = "<group>"; };
+		2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NootropicTableViewController.m; sourceTree = "<group>"; };
+		2778CC821B58BF2300AE9C59 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		2778CC831B58BF2300AE9C59 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
+		2778CC851B58FFED00AE9C59 /* CCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCell.h; sourceTree = "<group>"; };
+		2778CC861B58FFED00AE9C59 /* CCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,12 @@
 				2734292D1B4FB75C009FCB27 /* ViewController.h */,
 				2734292E1B4FB75C009FCB27 /* ViewController.m */,
 				27328FA11B568567005F057E /* Main.storyboard */,
+				2778CC7F1B58A5CD00AE9C59 /* NootropicTableViewController.h */,
+				2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */,
+				2778CC851B58FFED00AE9C59 /* CCell.h */,
+				2778CC861B58FFED00AE9C59 /* CCell.m */,
+				2778CC821B58BF2300AE9C59 /* DetailedViewController.h */,
+				2778CC831B58BF2300AE9C59 /* DetailedViewController.m */,
 				2778CC4A1B57396000AE9C59 /* SubmissionViewController.h */,
 				2778CC4B1B57396000AE9C59 /* SubmissionViewController.m */,
 				273429331B4FB75C009FCB27 /* Images.xcassets */,
@@ -287,6 +302,9 @@
 				2778CC4C1B57396000AE9C59 /* SubmissionViewController.m in Sources */,
 				2734292F1B4FB75C009FCB27 /* ViewController.m in Sources */,
 				2734292C1B4FB75C009FCB27 /* AppDelegate.m in Sources */,
+				2778CC811B58A5CD00AE9C59 /* NootropicTableViewController.m in Sources */,
+				2778CC871B58FFED00AE9C59 /* CCell.m in Sources */,
+				2778CC841B58BF2300AE9C59 /* DetailedViewController.m in Sources */,
 				273429291B4FB75C009FCB27 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

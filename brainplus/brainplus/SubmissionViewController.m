@@ -41,6 +41,8 @@
     NSLog(@"dosage: %@", dosage);
     //printing
     
+    
+    //saving the object to Parse
     PFObject *nootropicObject = [PFObject objectWithClassName:@"Nootropic"];
     nootropicObject[@"Type"] = self.typePicker;
     nootropicObject[@"Name"] = name;
@@ -48,7 +50,7 @@
     nootropicObject[@"Description"] = description;
     [nootropicObject saveInBackground];
    
-    /** [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];**/
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 
 }
 
