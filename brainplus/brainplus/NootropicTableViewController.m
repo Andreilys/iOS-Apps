@@ -18,12 +18,11 @@
 @implementation NootropicTableViewController
 {
     NSMutableArray *nootropicsArray;
+    NSMutableArray *nootropicsVoteValueArray;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     //I'm finding the object for social (this will have to adjust according to which button was pressed on home)
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
     [query whereKey:@"Type" equalTo:@"Social"];
@@ -31,13 +30,17 @@
         if (!error) {
             //adding to the nootropics array
             for (PFObject *object in objects) {
+                //if the object isn't already found in the array (aka the column) - this avoids duplicates
                 if (![nootropicsArray containsObject:object[@"Name"]]) {
+                    //check to see if it exists already
                     if(nootropicsArray){
                         [nootropicsArray addObject:object[@"Name"]];
+                        [nootropicsVoteValueArray addObject:object[@"VoteValue"]];
                         [self.tableView reloadData];
                     }
                     else {
                         nootropicsArray = [NSMutableArray arrayWithObjects:object[@"Name"],nil];
+                        nootropicsVoteValueArray = [NSMutableArray arrayWithObjects:object[@"VoteValue"],nil];
                         [self.tableView reloadData];
                     }
                     
@@ -62,16 +65,17 @@
     [query whereKey:@"Type" equalTo:@"Social"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // The find succeeded.
-            // Do something with the found objects
             for (PFObject *object in objects) {
+                //avoids duplicates
                 if (![nootropicsArray containsObject:object[@"Name"]]) {
                     if(nootropicsArray){
                         [nootropicsArray addObject:object[@"Name"]];
+                        [nootropicsVoteValueArray addObject:object[@"VoteValue"]];
                         [self.tableView reloadData];
                     }
                     else {
                         nootropicsArray = [NSMutableArray arrayWithObjects:object[@"Name"],nil];
+                        nootropicsVoteValueArray = [NSMutableArray arrayWithObjects:object[@"VoteValue"],nil];
                         [self.tableView reloadData];
                     }
 
@@ -100,20 +104,6 @@
     return [nootropicsArray count];
 }
 
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    static NSString *simpleTableIdentifier = @"SimpleTableCell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//    
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//    }
-//    cell.textLabel.text = [nootropicsArray objectAtIndex:indexPath.row];
-//    return cell;
-//}
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger newIndexPath = indexPath.row + 1;
@@ -123,7 +113,8 @@
     cell.nameLabel.text = [nootropicsArray objectAtIndex:indexPath.row];
     //init cell with the values
     cell.voteValue.tag = newIndexPath *1000;
-    cell.voteValue.text = @"0";
+    //need to query array to get vote value for cell
+    cell.voteValue.text = [NSString stringWithFormat:@"%@",[nootropicsVoteValueArray objectAtIndex:indexPath.row]];
     cell.upvoteButton.tag = newIndexPath;
     [cell.upvoteButton addTarget:self action:@selector(upVoteClicked:) forControlEvents:UIControlEventTouchUpInside];
     cell.downvoteButton.tag = newIndexPath*100;
@@ -136,11 +127,35 @@
     //This is the hack-iest thing ever. Basically, I get the tag value from the cell, call the cell, increase the votevalueint on this specific cell, and add it to the new label
     NSInteger cellValue = upvote.tag * 10000;
     CCell *cell = (CCell *)[self.view viewWithTag:cellValue];
-    cell.voteValueInt++;
-    NSInteger tagValue = upvote.tag*1000;
-    UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
-    label.text = [NSString stringWithFormat:@"%d", cell.voteValueInt];
-    upvote.enabled = NO;
+    
+    //need to query object to save the votevalue in Parse
+    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
+    [query whereKey:@"Name" equalTo:cell.nameLabel.text];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *object in objects){
+                //need to get the vote value from the parse object
+                NSInteger voteValue = [[object objectForKey:@"VoteValue"] integerValue];
+                voteValue++;
+                
+                //saving the new vote value
+                object[@"VoteValue"] = @(voteValue);
+                [object saveInBackground];
+                
+                //displaying the new vote value
+                NSInteger tagValue = upvote.tag*1000;
+                UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
+                label.text = [NSString stringWithFormat:@"%d", voteValue];
+                upvote.enabled = NO;
+                cell.downvoteButton.enabled = YES;
+
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
 }
 
 -(void)downVoteClicked:(UIButton *)downvote
@@ -148,11 +163,33 @@
     //see above explanation
     NSInteger cellValue = downvote.tag * 100;
     CCell *cell = (CCell *)[self.view viewWithTag:cellValue];
-    cell.voteValueInt--;
-    NSInteger tagValue = downvote.tag*10;
-    UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
-    label.text = [NSString stringWithFormat:@"%d", cell.voteValueInt];
-    downvote.enabled = NO;
+    
+    //need to query object to save the votevalue in Parse
+    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
+    [query whereKey:@"Name" equalTo:cell.nameLabel.text];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *object in objects){
+                //need to get the vote value from the parse object
+                NSInteger voteValue = [[object objectForKey:@"VoteValue"] integerValue];
+                voteValue--;
+                
+                //saving the new vote value
+                object[@"VoteValue"] = @(voteValue);
+                [object saveInBackground];
+                
+                //displaying the new vote value
+                NSInteger tagValue = downvote.tag*10;
+                UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
+                label.text = [NSString stringWithFormat:@"%d", voteValue];
+                downvote.enabled = NO;
+                cell.upvoteButton.enabled = YES;
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

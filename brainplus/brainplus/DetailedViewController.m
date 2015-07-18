@@ -24,8 +24,6 @@
     [query whereKey:@"Name" equalTo:self.nootropicName];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
             // Load the objects from the name
             for (PFObject *object in objects) {
                 self.nameValue.text = object[@"Name"];
@@ -42,12 +40,6 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    NSLog(@"works on the other side: %@", self.nootropicName);
-    
-
-
-}
 
 
 - (IBAction)doneButtonPressed:(id)sender {

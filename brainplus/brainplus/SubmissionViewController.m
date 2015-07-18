@@ -25,6 +25,9 @@
     // Do any additional setup after loading the view.
     
 }
+- (IBAction)cancelButton:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 - (IBAction)doneButtonClicked:(id)sender {
     //storing the value of the different fields
     NSString *name= self.nameField.text;
@@ -36,22 +39,27 @@
     row = [_typePicker selectedRowInComponent:0];
     self.typePicker = [_pickerData objectAtIndex:row];
 
-    NSLog(@"type: %@", self.typePicker);
-    NSLog(@"description: %@", description);
-    NSLog(@"dosage: %@", dosage);
-    //printing
-    
-    
-    //saving the object to Parse
-    PFObject *nootropicObject = [PFObject objectWithClassName:@"Nootropic"];
-    nootropicObject[@"Type"] = self.typePicker;
-    nootropicObject[@"Name"] = name;
-    nootropicObject[@"Dosage"] = dosage;
-    nootropicObject[@"Description"] = description;
-    [nootropicObject saveInBackground];
-   
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-
+    if ([name  isEqual: @""] || [dosage  isEqual: @""] || [description  isEqual: @""])
+    {
+        name = NULL;
+        dosage = NULL;
+        description = NULL;
+        self.typePicker = NULL;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incomplete" message:@"Please make sure to fill out all the fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+        [alert show];
+    }
+    else {
+        //saving the object to Parse
+        PFObject *nootropicObject = [PFObject objectWithClassName:@"Nootropic"];
+        nootropicObject[@"Type"] = self.typePicker;
+        nootropicObject[@"Name"] = name;
+        nootropicObject[@"Dosage"] = dosage;
+        nootropicObject[@"Description"] = description;
+        nootropicObject[@"VoteValue"] = @1;
+        [nootropicObject saveInBackground];
+        
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
