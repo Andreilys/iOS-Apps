@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *typeValue;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionValue;
 
+
 @end

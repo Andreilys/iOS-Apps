@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NootropicTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface NootropicTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UITabBarControllerDelegate>
 
 @property (weak, nonatomic) NSString *nootropicValue;
 

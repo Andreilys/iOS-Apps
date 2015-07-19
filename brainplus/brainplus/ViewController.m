@@ -25,4 +25,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
+{
+    if (item.tag == 1){
+        [self performSegueWithIdentifier:@"showFavorites" sender:self];
+    }
+}
+
 @end

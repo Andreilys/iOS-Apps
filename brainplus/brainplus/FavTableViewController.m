@@ -1,21 +1,21 @@
 //
-//  NootropicTableViewController.m
+//  FavTableViewController.m
 //  brainplus
 //
-//  Created by Andrei on 7/17/15.
+//  Created by Andrei on 7/19/15.
 //  Copyright (c) 2015 Andrei. All rights reserved.
 //
 
-#import "NootropicTableViewController.h"
+#import "FavTableViewController.h"
 #import "Parse/Parse.h"
-#import "DetailedViewController.h"
 #import "CCell.h"
+#import "DetailedViewController.h"
 
-@interface NootropicTableViewController ()
+@interface FavTableViewController ()
 
 @end
 
-@implementation NootropicTableViewController
+@implementation FavTableViewController
 {
     NSMutableArray *nootropicsArray;
     NSMutableArray *nootropicsVoteValueArray;
@@ -25,7 +25,7 @@
     [super viewDidLoad];
     //I'm finding the object for social (this will have to adjust according to which button was pressed on home)
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Type" equalTo:@"Social"];
+    [query whereKey:@"Favorite" equalTo:@"True"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             //adding to the nootropics array
@@ -48,7 +48,7 @@
                 {
                     return;
                 }
-        
+                
             }
         } else {
             // Log details of the failure
@@ -62,7 +62,7 @@
 {
     //this is to make sure that whenever the view appears it shows the new objects
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Type" equalTo:@"Social"];
+    [query whereKey:@"Favorite" equalTo:@"True"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (PFObject *object in objects) {
@@ -78,7 +78,7 @@
                         nootropicsVoteValueArray = [NSMutableArray arrayWithObjects:object[@"VoteValue"],nil];
                         [self.tableView reloadData];
                     }
-
+                    
                 } else
                 {
                     return;
@@ -89,16 +89,9 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-
+    
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [nootropicsArray count];
@@ -106,90 +99,16 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger newIndexPath = indexPath.row + 1;
+
     //create the cell
     CCell *cell = (CCell *)[tableView dequeueReusableCellWithIdentifier:@"CCell"];
-    cell.tag = newIndexPath * 10000;
     cell.nameLabel.text = [nootropicsArray objectAtIndex:indexPath.row];
     //init cell with the values
-    cell.voteValue.tag = newIndexPath *1000;
     //need to query array to get vote value for cell
     cell.voteValue.text = [NSString stringWithFormat:@"%@",[nootropicsVoteValueArray objectAtIndex:indexPath.row]];
-    cell.upvoteButton.tag = newIndexPath;
-    [cell.upvoteButton addTarget:self action:@selector(upVoteClicked:) forControlEvents:UIControlEventTouchUpInside];
-    cell.downvoteButton.tag = newIndexPath*100;
-    [cell.downvoteButton addTarget:self action:@selector(downVoteClicked:) forControlEvents:UIControlEventTouchUpInside];
-    return cell;
-}
-
--(void)upVoteClicked:(UIButton *)upvote
-{
-    //This is the hack-iest thing ever. Basically, I get the tag value from the cell, call the cell, increase the votevalueint on this specific cell, and add it to the new label
-    NSInteger cellValue = upvote.tag * 10000;
-    CCell *cell = (CCell *)[self.view viewWithTag:cellValue];
-    
-    //need to query object to save the votevalue in Parse
-    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Name" equalTo:cell.nameLabel.text];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for (PFObject *object in objects){
-                //need to get the vote value from the parse object
-                NSInteger voteValue = [[object objectForKey:@"VoteValue"] integerValue];
-                voteValue++;
-                
-                //saving the new vote value
-                object[@"VoteValue"] = @(voteValue);
-                [object saveInBackground];
-                
-                //displaying the new vote value
-                NSInteger tagValue = upvote.tag*1000;
-                UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
-                label.text = [NSString stringWithFormat:@"%d", voteValue];
-                upvote.enabled = NO;
-                cell.downvoteButton.enabled = YES;
-
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    
-}
-
--(void)downVoteClicked:(UIButton *)downvote
-{
-    //see above explanation
-    NSInteger cellValue = downvote.tag * 100;
-    CCell *cell = (CCell *)[self.view viewWithTag:cellValue];
-    
-    //need to query object to save the votevalue in Parse
-    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Name" equalTo:cell.nameLabel.text];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for (PFObject *object in objects){
-                //need to get the vote value from the parse object
-                NSInteger voteValue = [[object objectForKey:@"VoteValue"] integerValue];
-                voteValue--;
-                
-                //saving the new vote value
-                object[@"VoteValue"] = @(voteValue);
-                [object saveInBackground];
-                
-                //displaying the new vote value
-                NSInteger tagValue = downvote.tag*10;
-                UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
-                label.text = [NSString stringWithFormat:@"%d", voteValue];
-                downvote.enabled = NO;
-                cell.upvoteButton.enabled = YES;
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    cell.downvoteButton.enabled = NO;
+    cell.upvoteButton.enabled = NO;
+   return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -200,18 +119,80 @@
 //segues into the new view
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"works now");
     if ([segue.identifier isEqualToString:@"moreDetails"]) {
-    
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         NSInteger rowSelected = selectedIndexPath.row;
         DetailedViewController *controller = (DetailedViewController *)segue.destinationViewController;
-        self.nootropicValue = [nootropicsArray objectAtIndex:rowSelected];
-        controller.nootropicName = self.nootropicValue;
+        controller.nootropicName = [nootropicsArray objectAtIndex:rowSelected];
     }
 }
 
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    return YES; // So that I can determine whether or not to perform the segue based on app logic
+}
 
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
+#pragma mark - Table view data source
+
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

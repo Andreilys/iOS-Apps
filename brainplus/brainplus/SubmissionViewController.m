@@ -25,9 +25,13 @@
     // Do any additional setup after loading the view.
     
 }
+
+
 - (IBAction)cancelButton:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 - (IBAction)doneButtonClicked:(id)sender {
     //storing the value of the different fields
     NSString *name= self.nameField.text;
@@ -49,6 +53,7 @@
         [alert show];
     }
     else {
+
         //saving the object to Parse
         PFObject *nootropicObject = [PFObject objectWithClassName:@"Nootropic"];
         nootropicObject[@"Type"] = self.typePicker;
@@ -56,8 +61,9 @@
         nootropicObject[@"Dosage"] = dosage;
         nootropicObject[@"Description"] = description;
         nootropicObject[@"VoteValue"] = @1;
+        nootropicObject[@"Favorite"] = @"False";
         [nootropicObject saveInBackground];
-        
+                NSLog(@"works");
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
 }

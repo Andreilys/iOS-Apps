@@ -8,7 +8,7 @@
 
 #import "DetailedViewController.h"
 #import "Parse/Parse.h"
-#import "NootropicTableViewController.h"
+
 
 @interface DetailedViewController ()
 
@@ -26,6 +26,7 @@
         if (!error) {
             // Load the objects from the name
             for (PFObject *object in objects) {
+                NSLog(@"Dosage Value: %@", object[@"Dosage"]);
                 self.nameValue.text = object[@"Name"];
                 self.dosageValue.text = object[@"Dosage"];
                 self.typeValue.text = object[@"Type"];
@@ -40,6 +41,29 @@
     
 }
 
+- (IBAction)favoriteButton:(id)sender {
+    //need to query object to save the votevalue in Parse
+    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
+    [query whereKey:@"Name" equalTo:self.nootropicName];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *object in objects){
+                if ([object[@"Favorite"]  isEqual: @"True"]) {
+                    object[@"Favorite"] = @"False";
+                    [object saveInBackground];
+                }
+                else {
+                    object[@"Favorite"] = @"True";
+                    [object saveInBackground];
+                }
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+}
 
 
 - (IBAction)doneButtonPressed:(id)sender {
@@ -49,6 +73,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
+{
+    if (item.tag == 1){
+        [self performSegueWithIdentifier:@"showFavorites" sender:self];
+    }
 }
 
 /*

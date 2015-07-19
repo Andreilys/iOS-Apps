@@ -25,7 +25,7 @@ Table view should be able to pull info from Parse and display
 Step 4: UNFINISHED
 -Rearrange the cells based on the vote score
 
-Step 5:
+Step 5: DONE
 Store in Parse the vote score, and be able to pull it to display
 
 Step 6:
@@ -40,4 +40,7 @@ UI/UX Work
 
 Bugs:
 Doesn't load after submission is submitted
-make tableview scrollable
+make tableview rearrangable
+have favorites unselect when view loads
+need to create a start that lights up/lights off depending on whether something is true or not
+basically if you have the same name for a supplement, but a different type, then you will not be able to load it in the favorites bar (it will only load one for some reason)

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		27328FA01B56839C005F057E /* What Needs To Be Done in Resources */ = {isa = PBXBuildFile; fileRef = 27328F9F1B56839C005F057E /* What Needs To Be Done */; };
-		27328FA21B568567005F057E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27328FA11B568567005F057E /* Main.storyboard */; };
 		273429291B4FB75C009FCB27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273429281B4FB75C009FCB27 /* main.m */; };
 		2734292C1B4FB75C009FCB27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2734292B1B4FB75C009FCB27 /* AppDelegate.m */; };
 		2734292F1B4FB75C009FCB27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2734292E1B4FB75C009FCB27 /* ViewController.m */; };
 		273429341B4FB75C009FCB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273429331B4FB75C009FCB27 /* Images.xcassets */; };
 		273429371B4FB75C009FCB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273429351B4FB75C009FCB27 /* LaunchScreen.xib */; };
 		273429431B4FB75C009FCB27 /* brainplusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 273429421B4FB75C009FCB27 /* brainplusTests.m */; };
+		27568F421B5B361C00042722 /* FavTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27568F411B5B361C00042722 /* FavTableViewController.m */; };
+		27568F461B5B4EB600042722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27568F451B5B4EB600042722 /* Main.storyboard */; };
 		2778CC331B5737D700AE9C59 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2778CC311B5737D700AE9C59 /* Bolts.framework */; };
 		2778CC341B5737D700AE9C59 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2778CC321B5737D700AE9C59 /* Parse.framework */; };
 		2778CC371B57381300AE9C59 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2778CC361B57381300AE9C59 /* AudioToolbox.framework */; };
@@ -45,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		27328F9F1B56839C005F057E /* What Needs To Be Done */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "What Needs To Be Done"; path = "brainplus/What Needs To Be Done"; sourceTree = "<group>"; };
-		27328FA11B568567005F057E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		273429231B4FB75C009FCB27 /* brainplus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brainplus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273429271B4FB75C009FCB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273429281B4FB75C009FCB27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +58,9 @@
 		2734293C1B4FB75C009FCB27 /* brainplusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brainplusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273429411B4FB75C009FCB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273429421B4FB75C009FCB27 /* brainplusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = brainplusTests.m; sourceTree = "<group>"; };
+		27568F401B5B361C00042722 /* FavTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavTableViewController.h; sourceTree = "<group>"; };
+		27568F411B5B361C00042722 /* FavTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavTableViewController.m; sourceTree = "<group>"; };
+		27568F451B5B4EB600042722 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2778CC311B5737D700AE9C59 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2778CC321B5737D700AE9C59 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		2778CC361B57381300AE9C59 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -135,9 +138,11 @@
 			children = (
 				2734292A1B4FB75C009FCB27 /* AppDelegate.h */,
 				2734292B1B4FB75C009FCB27 /* AppDelegate.m */,
+				27568F451B5B4EB600042722 /* Main.storyboard */,
 				2734292D1B4FB75C009FCB27 /* ViewController.h */,
 				2734292E1B4FB75C009FCB27 /* ViewController.m */,
-				27328FA11B568567005F057E /* Main.storyboard */,
+				27568F401B5B361C00042722 /* FavTableViewController.h */,
+				27568F411B5B361C00042722 /* FavTableViewController.m */,
 				2778CC7F1B58A5CD00AE9C59 /* NootropicTableViewController.h */,
 				2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */,
 				2778CC851B58FFED00AE9C59 /* CCell.h */,
@@ -278,10 +283,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27568F461B5B4EB600042722 /* Main.storyboard in Resources */,
 				27328FA01B56839C005F057E /* What Needs To Be Done in Resources */,
 				273429371B4FB75C009FCB27 /* LaunchScreen.xib in Resources */,
 				273429341B4FB75C009FCB27 /* Images.xcassets in Resources */,
-				27328FA21B568567005F057E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +311,7 @@
 				2778CC871B58FFED00AE9C59 /* CCell.m in Sources */,
 				2778CC841B58BF2300AE9C59 /* DetailedViewController.m in Sources */,
 				273429291B4FB75C009FCB27 /* main.m in Sources */,
+				27568F421B5B361C00042722 /* FavTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
