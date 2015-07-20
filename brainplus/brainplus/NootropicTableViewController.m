@@ -19,6 +19,7 @@
 {
     NSMutableArray *nootropicsArray;
     NSMutableArray *nootropicsVoteValueArray;
+    NSArray *sortedArray;
 }
 
 - (void)viewDidLoad {
@@ -29,7 +30,12 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             //adding to the nootropics array
-            for (PFObject *object in objects) {
+                NSSortDescriptor *sortDescriptor;
+                sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"VoteValue"
+                                                             ascending:NO];
+                NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+                sortedArray = [objects sortedArrayUsingDescriptors:sortDescriptors];
+            for (PFObject *object in sortedArray) {
                 //if the object isn't already found in the array (aka the column) - this avoids duplicates
                 if (![nootropicsArray containsObject:object[@"Name"]]) {
                     //check to see if it exists already
@@ -65,7 +71,13 @@
     [query whereKey:@"Type" equalTo:@"Social"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            for (PFObject *object in objects) {
+            
+            NSSortDescriptor *sortDescriptor;
+            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"VoteValue"
+                                                         ascending:NO];
+            NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+            sortedArray = [objects sortedArrayUsingDescriptors:sortDescriptors];
+            for (PFObject *object in sortedArray) {
                 //avoids duplicates
                 if (![nootropicsArray containsObject:object[@"Name"]]) {
                     if(nootropicsArray){
@@ -84,12 +96,12 @@
                     return;
                 }
             }
-        } else {
+        }
+         else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-
     
 }
 

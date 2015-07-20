@@ -19,6 +19,7 @@
 {
     NSMutableArray *nootropicsArray;
     NSMutableArray *nootropicsVoteValueArray;
+    NSArray *sortedArray;
 }
 
 - (void)viewDidLoad {
@@ -28,8 +29,16 @@
     [query whereKey:@"Favorite" equalTo:@"True"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
+            
+            //need to sort the array so that it shows the objects in vote-value descending order
+            NSSortDescriptor *sortDescriptor;
+            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"VoteValue"
+                                                         ascending:NO];
+            NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+            sortedArray = [objects sortedArrayUsingDescriptors:sortDescriptors];
+
             //adding to the nootropics array
-            for (PFObject *object in objects) {
+            for (PFObject *object in sortedArray) {
                 //if the object isn't already found in the array (aka the column) - this avoids duplicates
                 if (![nootropicsArray containsObject:object[@"Name"]]) {
                     //check to see if it exists already
@@ -65,7 +74,13 @@
     [query whereKey:@"Favorite" equalTo:@"True"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            for (PFObject *object in objects) {
+            NSSortDescriptor *sortDescriptor;
+            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"VoteValue"
+                                                         ascending:NO];
+            NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+            sortedArray = [objects sortedArrayUsingDescriptors:sortDescriptors];
+
+            for (PFObject *object in sortedArray) {
                 //avoids duplicates
                 if (![nootropicsArray containsObject:object[@"Name"]]) {
                     if(nootropicsArray){

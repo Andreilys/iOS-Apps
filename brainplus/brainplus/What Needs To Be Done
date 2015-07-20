@@ -22,13 +22,13 @@ create the unique view cell that will populate table view controller
 Step 3: DONE
 Table view should be able to pull info from Parse and display
 
-Step 4: UNFINISHED
+Step 4: DONE
 -Rearrange the cells based on the vote score
 
 Step 5: DONE
 Store in Parse the vote score, and be able to pull it to display
 
-Step 6:
+Step 6: DONE
 Create the favorites page
 
 Step 7:
@@ -42,5 +42,6 @@ Bugs:
 Doesn't load after submission is submitted
 make tableview rearrangable
 have favorites unselect when view loads
-need to create a start that lights up/lights off depending on whether something is true or not
+need to create a star that lights up/lights off depending on whether something is a favorite or not
 basically if you have the same name for a supplement, but a different type, then you will not be able to load it in the favorites bar (it will only load one for some reason)
+If you save something to favorites, it will be favorites for everyone, not just one person
