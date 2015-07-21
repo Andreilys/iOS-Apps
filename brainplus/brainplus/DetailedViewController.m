@@ -12,6 +12,7 @@
 
 @interface DetailedViewController ()
 
+
 @end
 
 @implementation DetailedViewController
@@ -31,6 +32,7 @@
                 self.dosageValue.text = object[@"Dosage"];
                 self.typeValue.text = object[@"Type"];
                 self.descriptionValue.text = object[@"Description"];
+                self.sourceValue.text = object[@"Source"];
             }
         } else {
             // Log details of the failure

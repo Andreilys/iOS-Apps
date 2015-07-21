@@ -37,17 +37,19 @@
     NSString *name= self.nameField.text;
     NSString *dosage = self.dosageField.text;
     NSString *description = self.descriptionField.text;
+    NSString *source = self.sourceField.text;
     
     //storing the value of the picker
     NSInteger row;
     row = [_typePicker selectedRowInComponent:0];
     self.typePicker = [_pickerData objectAtIndex:row];
 
-    if ([name  isEqual: @""] || [dosage  isEqual: @""] || [description  isEqual: @""])
+    if ([name  isEqual: @""] || [dosage  isEqual: @""] || [description  isEqual: @""] || [source isEqual:@""])
     {
         name = NULL;
         dosage = NULL;
         description = NULL;
+        source = NULL;
         self.typePicker = NULL;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incomplete" message:@"Please make sure to fill out all the fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
         [alert show];
@@ -62,6 +64,7 @@
         nootropicObject[@"Description"] = description;
         nootropicObject[@"VoteValue"] = @1;
         nootropicObject[@"Favorite"] = @"False";
+        nootropicObject[@"Source"] = source;
         [nootropicObject saveInBackground];
                 NSLog(@"works");
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];

@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *dosageField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionField;
+@property (weak, nonatomic) IBOutlet UITextField *sourceField;
 @property (weak, nonatomic) IBOutlet UIPickerView *typePicker;
 
 @end

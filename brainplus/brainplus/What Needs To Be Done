@@ -40,8 +40,6 @@ UI/UX Work
 
 Bugs:
 Doesn't load after submission is submitted
-make tableview rearrangable
-have favorites unselect when view loads
-need to create a star that lights up/lights off depending on whether something is a favorite or not
+
 basically if you have the same name for a supplement, but a different type, then you will not be able to load it in the favorites bar (it will only load one for some reason)
 If you save something to favorites, it will be favorites for everyone, not just one person

@@ -76,7 +76,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Favorites" id="8Hg-cV-6oJ">
+                                <barButtonItem title="BrainPlus Favorites" id="8Hg-cV-6oJ">
                                     <connections>
                                         <segue destination="83h-Ph-oYE" kind="show" id="jpi-ug-miT"/>
                                     </connections>
@@ -343,6 +343,7 @@
                         <outlet property="descriptionField" destination="fLU-yH-UMT" id="VMZ-i7-Evo"/>
                         <outlet property="dosageField" destination="BA1-Me-hGQ" id="8Xc-cQ-3mO"/>
                         <outlet property="nameField" destination="ez1-L3-L8b" id="8hB-eV-gOg"/>
+                        <outlet property="sourceField" destination="74A-Tc-ytY" id="wTw-RG-q4X"/>
                         <outlet property="typePicker" destination="S4b-LD-fs1" id="NHf-t1-A3q"/>
                     </connections>
                 </viewController>
@@ -491,12 +492,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Source" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdE-Lt-iAF">
-                                <rect key="frame" x="20" y="421" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VG2-jY-YJO">
                                 <rect key="frame" x="91" y="96" width="203" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -521,18 +516,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymm-FY-lby">
-                                <rect key="frame" x="98" y="177" width="191" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKH-zw-prt">
                                 <rect key="frame" x="16" y="417" width="266" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdE-Lt-iAF">
+                                <rect key="frame" x="20" y="421" width="255" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymm-FY-lby">
+                                <rect key="frame" x="98" y="177" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -541,6 +542,7 @@
                         <outlet property="descriptionValue" destination="FYx-Rv-00t" id="2cX-zm-KLc"/>
                         <outlet property="dosageValue" destination="V9P-5p-eAT" id="Nj0-Up-3M0"/>
                         <outlet property="nameValue" destination="H2j-Ef-rWG" id="XFG-zb-d9G"/>
+                        <outlet property="sourceValue" destination="FdE-Lt-iAF" id="YE1-Tl-lif"/>
                         <outlet property="typeValue" destination="ymm-FY-lby" id="Y6E-ON-9PE"/>
                     </connections>
                 </viewController>

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dosageValue;
 @property (weak, nonatomic) IBOutlet UILabel *typeValue;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionValue;
+@property (weak, nonatomic) IBOutlet UILabel *sourceValue;
 
 
 @end
