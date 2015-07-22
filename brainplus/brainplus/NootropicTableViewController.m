@@ -26,7 +26,7 @@
     [super viewDidLoad];
     //I'm finding the object for social (this will have to adjust according to which button was pressed on home)
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Type" equalTo:@"Social"];
+    [query whereKey:@"Type" equalTo:self.nootropicTypeValue];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             //adding to the nootropics array
@@ -68,7 +68,7 @@
 {
     //this is to make sure that whenever the view appears it shows the new objects
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Type" equalTo:@"Social"];
+    [query whereKey:@"Type" equalTo:self.nootropicTypeValue];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
@@ -157,7 +157,7 @@
                 //displaying the new vote value
                 NSInteger tagValue = upvote.tag*1000;
                 UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
-                label.text = [NSString stringWithFormat:@"%d", voteValue];
+                label.text = [NSString stringWithFormat:@"%ld", (long)voteValue];
                 upvote.enabled = NO;
                 cell.downvoteButton.enabled = YES;
 
@@ -193,7 +193,7 @@
                 //displaying the new vote value
                 NSInteger tagValue = downvote.tag*10;
                 UILabel *label = (UILabel *)[self.view viewWithTag:tagValue];
-                label.text = [NSString stringWithFormat:@"%d", voteValue];
+                label.text = [NSString stringWithFormat:@"%ld", (long)voteValue];
                 downvote.enabled = NO;
                 cell.upvoteButton.enabled = YES;
             }

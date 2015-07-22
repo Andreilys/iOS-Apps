@@ -11,5 +11,6 @@
 @interface NootropicTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UITabBarControllerDelegate>
 
 @property (weak, nonatomic) NSString *nootropicValue;
+@property (nonatomic) NSString *nootropicTypeValue;
 
 @end

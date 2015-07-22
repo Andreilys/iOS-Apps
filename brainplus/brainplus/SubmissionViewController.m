@@ -38,11 +38,12 @@
     NSString *dosage = self.dosageField.text;
     NSString *description = self.descriptionField.text;
     NSString *source = self.sourceField.text;
-    
     //storing the value of the picker
     NSInteger row;
     row = [_typePicker selectedRowInComponent:0];
     self.typePicker = [_pickerData objectAtIndex:row];
+    //hacked together to address problem
+    NSString *realName = [NSString stringWithFormat:@"%@ (%@)", name, self.typePicker];
 
     if ([name  isEqual: @""] || [dosage  isEqual: @""] || [description  isEqual: @""] || [source isEqual:@""])
     {
@@ -59,7 +60,7 @@
         //saving the object to Parse
         PFObject *nootropicObject = [PFObject objectWithClassName:@"Nootropic"];
         nootropicObject[@"Type"] = self.typePicker;
-        nootropicObject[@"Name"] = name;
+        nootropicObject[@"Name"] = realName;
         nootropicObject[@"Dosage"] = dosage;
         nootropicObject[@"Description"] = description;
         nootropicObject[@"VoteValue"] = @1;
@@ -80,12 +81,13 @@
 //initializing the picker
 -(int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 1;
+    int pickerview = 1;
+    return pickerview;
 }
 
 -(int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _pickerData.count;
+    return (int)_pickerData.count;
 }
 
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component

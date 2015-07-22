@@ -6,63 +6,35 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Rlg-7j-l2F">
+        <!--Main Table View Controller-->
+        <scene sceneID="n4s-P2-1Uk">
             <objects>
-                <viewController id="c2J-lI-Vq8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zwe-Yb-R2l"/>
-                        <viewControllerLayoutGuide type="bottom" id="dBs-h0-7qk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ga5-ph-iy8">
+                <tableViewController id="GzW-Pd-h1d" customClass="MainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="cY4-mY-ZEs" customClass="main">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-e5-Vj6">
-                                <rect key="frame" x="-5" y="184" width="613" height="128"/>
-                                <state key="normal" image="Relax">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFT-yK-Avi">
-                                <rect key="frame" x="0.0" y="305" width="600" height="124"/>
-                                <state key="normal" image="Social">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-IE-G4b">
-                                <rect key="frame" x="0.0" y="427" width="600" height="124"/>
-                                <state key="normal" image="Work">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9m-15-Fc6">
-                                <rect key="frame" x="0.0" y="64" width="600" height="124"/>
-                                <state key="normal" image="Active">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bEn-TB-Tew" kind="show" id="P4T-es-3Br"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RIr-f5-Efe">
-                        <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fGQ-jA-03c">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Brain+">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <barButtonItem key="rightBarButtonItem" id="ftQ-ND-Ay4"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="STe-4J-qtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TypeViewCell" rowHeight="115" id="BuK-Sz-SBt">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BuK-Sz-SBt" id="UTs-3G-BVt">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bEn-TB-Tew" kind="show" identifier="showType" id="Msa-cI-FcB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GzW-Pd-h1d" id="QIi-tL-SPh"/>
+                            <outlet property="delegate" destination="GzW-Pd-h1d" id="B51-qu-jfI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UuS-Dy-lhT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyL-os-A9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="210"/>
+            <point key="canvasLocation" x="433" y="210"/>
         </scene>
         <!--Brain+-->
         <scene sceneID="hdX-42-bIE">
@@ -76,7 +48,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="BrainPlus Favorites" id="8Hg-cV-6oJ">
+                                <barButtonItem title="Brain+ Favorites" id="8Hg-cV-6oJ">
                                     <connections>
                                         <segue destination="83h-Ph-oYE" kind="show" id="jpi-ug-miT"/>
                                     </connections>
@@ -559,7 +531,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="c2J-lI-Vq8" kind="relationship" relationship="rootViewController" id="MHi-DB-I6y"/>
+                        <segue destination="GzW-Pd-h1d" kind="relationship" relationship="rootViewController" id="xrj-Fb-Xcs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr1-gX-biz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -568,10 +540,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Active" width="600" height="124"/>
-        <image name="Relax" width="608" height="130"/>
-        <image name="Social" width="600" height="122"/>
-        <image name="Work" width="600" height="124"/>
         <image name="arrowDown" width="256" height="256"/>
         <image name="arrowUp" width="256" height="256"/>
     </resources>
