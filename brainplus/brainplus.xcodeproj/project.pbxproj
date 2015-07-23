@@ -31,7 +31,9 @@
 		2778CC811B58A5CD00AE9C59 /* NootropicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */; };
 		2778CC841B58BF2300AE9C59 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC831B58BF2300AE9C59 /* DetailedViewController.m */; };
 		2778CC871B58FFED00AE9C59 /* CCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2778CC861B58FFED00AE9C59 /* CCell.m */; };
-		27B6654D1B5F2C6500468B41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B6654C1B5F2C6500468B41 /* ViewController.m */; };
+		278423F81B60A89900A32428 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278423F71B60A89900A32428 /* ViewController.m */; };
+		278423FB1B60A8A000A32428 /* NSString+FormValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278423FA1B60A8A000A32428 /* NSString+FormValidation.m */; };
+		278423FE1B60A8A700A32428 /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278423FD1B60A8A700A32428 /* registerViewController.m */; };
 		27B665501B5F2C7100468B41 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B6654F1B5F2C7100468B41 /* MainTableViewController.m */; };
 		27B665531B5F2D8D00468B41 /* TypeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B665521B5F2D8D00468B41 /* TypeViewCell.m */; };
 /* End PBXBuildFile section */
@@ -81,8 +83,12 @@
 		2778CC831B58BF2300AE9C59 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 		2778CC851B58FFED00AE9C59 /* CCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCell.h; sourceTree = "<group>"; };
 		2778CC861B58FFED00AE9C59 /* CCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCell.m; sourceTree = "<group>"; };
-		27B6654B1B5F2C6500468B41 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27B6654C1B5F2C6500468B41 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		278423F61B60A89900A32428 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../Rival/Rival/ViewController.h; sourceTree = "<group>"; };
+		278423F71B60A89900A32428 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../Rival/Rival/ViewController.m; sourceTree = "<group>"; };
+		278423F91B60A8A000A32428 /* NSString+FormValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FormValidation.h"; path = "../../Rival/NSString+FormValidation.h"; sourceTree = "<group>"; };
+		278423FA1B60A8A000A32428 /* NSString+FormValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FormValidation.m"; path = "../../Rival/NSString+FormValidation.m"; sourceTree = "<group>"; };
+		278423FC1B60A8A700A32428 /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = ../../Rival/Rival/registerViewController.h; sourceTree = "<group>"; };
+		278423FD1B60A8A700A32428 /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerViewController.m; path = ../../Rival/Rival/registerViewController.m; sourceTree = "<group>"; };
 		27B6654E1B5F2C7100468B41 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		27B6654F1B5F2C7100468B41 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		27B665511B5F2D8D00468B41 /* TypeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeViewCell.h; sourceTree = "<group>"; };
@@ -142,25 +148,9 @@
 		273429251B4FB75C009FCB27 /* brainplus */ = {
 			isa = PBXGroup;
 			children = (
-				2734292A1B4FB75C009FCB27 /* AppDelegate.h */,
-				2734292B1B4FB75C009FCB27 /* AppDelegate.m */,
-				27B6654B1B5F2C6500468B41 /* ViewController.h */,
-				27B6654C1B5F2C6500468B41 /* ViewController.m */,
 				27568F451B5B4EB600042722 /* Main.storyboard */,
-				27B6654E1B5F2C7100468B41 /* MainTableViewController.h */,
-				27B6654F1B5F2C7100468B41 /* MainTableViewController.m */,
-				2778CC7F1B58A5CD00AE9C59 /* NootropicTableViewController.h */,
-				2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */,
-				2778CC4A1B57396000AE9C59 /* SubmissionViewController.h */,
-				2778CC4B1B57396000AE9C59 /* SubmissionViewController.m */,
-				2778CC821B58BF2300AE9C59 /* DetailedViewController.h */,
-				2778CC831B58BF2300AE9C59 /* DetailedViewController.m */,
-				27568F401B5B361C00042722 /* FavTableViewController.h */,
-				27568F411B5B361C00042722 /* FavTableViewController.m */,
-				27B665511B5F2D8D00468B41 /* TypeViewCell.h */,
-				27B665521B5F2D8D00468B41 /* TypeViewCell.m */,
-				2778CC851B58FFED00AE9C59 /* CCell.h */,
-				2778CC861B58FFED00AE9C59 /* CCell.m */,
+				27A7F73B1B60B32D007BA108 /* View Controllers */,
+				27A7F73C1B60B34F007BA108 /* Model */,
 				273429331B4FB75C009FCB27 /* Images.xcassets */,
 				273429351B4FB75C009FCB27 /* LaunchScreen.xib */,
 				273429261B4FB75C009FCB27 /* Supporting Files */,
@@ -171,6 +161,8 @@
 		273429261B4FB75C009FCB27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2734292A1B4FB75C009FCB27 /* AppDelegate.h */,
+				2734292B1B4FB75C009FCB27 /* AppDelegate.m */,
 				273429271B4FB75C009FCB27 /* Info.plist */,
 				273429281B4FB75C009FCB27 /* main.m */,
 			);
@@ -211,6 +203,40 @@
 				2778CC321B5737D700AE9C59 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27A7F73B1B60B32D007BA108 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				278423F61B60A89900A32428 /* ViewController.h */,
+				278423F71B60A89900A32428 /* ViewController.m */,
+				278423FC1B60A8A700A32428 /* registerViewController.h */,
+				278423FD1B60A8A700A32428 /* registerViewController.m */,
+				27B6654E1B5F2C7100468B41 /* MainTableViewController.h */,
+				27B6654F1B5F2C7100468B41 /* MainTableViewController.m */,
+				2778CC7F1B58A5CD00AE9C59 /* NootropicTableViewController.h */,
+				2778CC801B58A5CD00AE9C59 /* NootropicTableViewController.m */,
+				2778CC4A1B57396000AE9C59 /* SubmissionViewController.h */,
+				2778CC4B1B57396000AE9C59 /* SubmissionViewController.m */,
+				2778CC821B58BF2300AE9C59 /* DetailedViewController.h */,
+				2778CC831B58BF2300AE9C59 /* DetailedViewController.m */,
+				27568F401B5B361C00042722 /* FavTableViewController.h */,
+				27568F411B5B361C00042722 /* FavTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		27A7F73C1B60B34F007BA108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				278423F91B60A8A000A32428 /* NSString+FormValidation.h */,
+				278423FA1B60A8A000A32428 /* NSString+FormValidation.m */,
+				27B665511B5F2D8D00468B41 /* TypeViewCell.h */,
+				27B665521B5F2D8D00468B41 /* TypeViewCell.m */,
+				2778CC851B58FFED00AE9C59 /* CCell.h */,
+				2778CC861B58FFED00AE9C59 /* CCell.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,12 +343,14 @@
 				27B665531B5F2D8D00468B41 /* TypeViewCell.m in Sources */,
 				27B665501B5F2C7100468B41 /* MainTableViewController.m in Sources */,
 				2778CC4C1B57396000AE9C59 /* SubmissionViewController.m in Sources */,
+				278423FE1B60A8A700A32428 /* registerViewController.m in Sources */,
 				2734292C1B4FB75C009FCB27 /* AppDelegate.m in Sources */,
-				27B6654D1B5F2C6500468B41 /* ViewController.m in Sources */,
+				278423F81B60A89900A32428 /* ViewController.m in Sources */,
 				2778CC811B58A5CD00AE9C59 /* NootropicTableViewController.m in Sources */,
 				2778CC871B58FFED00AE9C59 /* CCell.m in Sources */,
 				2778CC841B58BF2300AE9C59 /* DetailedViewController.m in Sources */,
 				273429291B4FB75C009FCB27 /* main.m in Sources */,
+				278423FB1B60A8A000A32428 /* NSString+FormValidation.m in Sources */,
 				27568F421B5B361C00042722 /* FavTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

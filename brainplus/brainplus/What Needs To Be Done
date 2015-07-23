@@ -32,7 +32,8 @@ Step 6: DONE
 Create the favorites page
 
 Step 7:
-Create the journals page
+add an arrow key to show "more details"
+
 
 Step 8:
 UI/UX Work
@@ -40,6 +41,6 @@ UI/UX Work
 
 Bugs:
 Doesn't load after submission is submitted
-
-basically if you have the same name for a supplement, but a different type, then you will not be able to load it in the favorites bar (it will only load one for some reason)
 If you save something to favorites, it will be favorites for everyone, not just one person
+need to delete the ability to make the same username in parse
+5)	Speed up transition from login to main screen

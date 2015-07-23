@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "TypeViewCell.h"
+#import "Parse/Parse.h"
 #import "NootropicTableViewController.h"
 
 @interface MainTableViewController ()
@@ -15,6 +16,11 @@
 @end
 
 @implementation MainTableViewController
+
+- (IBAction)logOut:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"Home" sender:self];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

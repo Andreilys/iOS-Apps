@@ -11,6 +11,7 @@
 #import "NSString+FormValidation.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -18,6 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        [self performSegueWithIdentifier:@"showBrainPlus" sender:nil];
+        
+    } else {
+        return;
+    }
+    
 
 // Do any additional setup after loading the view, typically from a nib.
 }
@@ -25,15 +34,15 @@
 
 //whenever login button is pressed
 - (IBAction)loginButtonPressed:(id)sender {
-       __block NSString *errorMessage;
     //launch the validate form to make sure what the user entered makes sense
-    
+    [_spinner startAnimating];
     [PFUser logInWithUsernameInBackground:self.userTextField.text
                                  password:self.passwordTextField.text block:^(PFUser *user, NSError *error)
      
      {
          if (!error) {
-             [self performSegueWithIdentifier:@"showRivals" sender:nil];
+             [_spinner stopAnimating];
+             [self performSegueWithIdentifier:@"showBrainPlus" sender:nil];
          } else {
              [[[UIAlertView alloc] initWithTitle:nil message:@"Username or Password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
              
@@ -46,11 +55,9 @@
     [super viewWillAppear:YES];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
-        NSLog(@"works");
-        [self performSegueWithIdentifier:@"showRivals" sender:nil];
+        [self performSegueWithIdentifier:@"showBrainPlus" sender:nil];
         
     } else {
-        NSLog(@"nope");
         return;
     }
     

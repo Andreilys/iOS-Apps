@@ -30,12 +30,15 @@
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {   // Hooray! Let them use the app now.
-        } else {   NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
+        } else {
+            NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let
+        [[[UIAlertView alloc] initWithTitle:nil message:errorString delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+            return;
         }
     }];
     
     //perform segue
-    [self performSegueWithIdentifier:@"newView" sender:self];
+    [self performSegueWithIdentifier:@"showBrainView" sender:self];
     
 }
 
