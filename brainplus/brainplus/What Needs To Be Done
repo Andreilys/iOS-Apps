@@ -31,7 +31,7 @@ Store in Parse the vote score, and be able to pull it to display
 Step 6: DONE
 Create the favorites page
 
-Step 7:
+Step 7: DONE
 add an arrow key to show "more details"
 
 
@@ -40,7 +40,9 @@ UI/UX Work
 
 
 Bugs:
+Unknown class main in Interface Builder file.
+
 Doesn't load after submission is submitted
 If you save something to favorites, it will be favorites for everyone, not just one person
 need to delete the ability to make the same username in parse
-5)	Speed up transition from login to main screen
+

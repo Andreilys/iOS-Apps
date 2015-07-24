@@ -19,14 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        [self performSegueWithIdentifier:@"showBrainPlus" sender:nil];
-        
-    } else {
-        return;
-    }
-    
 
 // Do any additional setup after loading the view, typically from a nib.
 }
@@ -53,13 +45,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        [self performSegueWithIdentifier:@"showBrainPlus" sender:nil];
-        
-    } else {
-        return;
-    }
     
 }
 

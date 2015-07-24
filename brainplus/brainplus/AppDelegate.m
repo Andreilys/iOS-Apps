@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
 #import "ViewController.h"
+#import "MainTableViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,13 +31,26 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-
+    
+    if ([PFUser currentUser])
+    {
+        return YES;
+    }else {
+        [self showLoginScreen:YES];
+    }
     
     // ...
     return YES;
 }
 
 
+-(void) showLoginScreen:(BOOL)animated
+{
+    UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
+    self.window.rootViewController = navigation;
+
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
