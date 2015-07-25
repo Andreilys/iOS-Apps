@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface SubmissionViewController : ViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SubmissionViewController : ViewController <UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *dosageField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionField;

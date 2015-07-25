@@ -19,12 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _descriptionField.delegate = self;
+    _nameField.delegate = self;
+    _dosageField.delegate=self;
+    _sourceField.delegate=self;
     _pickerData = @[@"Work", @"Active", @"Social", @"Relax"];
     self.typePicker.dataSource = self;
     self.typePicker.delegate = self;
     // Do any additional setup after loading the view.
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
 
 
 - (IBAction)cancelButton:(id)sender {
