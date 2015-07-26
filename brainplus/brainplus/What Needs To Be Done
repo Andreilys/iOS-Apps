@@ -42,9 +42,13 @@ UI/UX Work
 Bugs:
 Unknown class main in Interface Builder file.
 
-Doesn't load after submission is submitted
 If you save something to favorites, it will be favorites for everyone, not just one person
 need to delete the ability to make the same username in parse
 make cells a lot bigger for clicking up and down
 keyboard issue
 make stuff scrollable
+email field defaults to email keyboard (For registartion)
+make the input field placeholders descriptive (for registration, etc) -> you actually don't need labels just use placeholders lmao
+use spinner when registering to hide the content on regiser/login
+also create a new view that has [login, register] which then leads to new views for [register] and [login]
+-detail field still doesnt work when hitting return

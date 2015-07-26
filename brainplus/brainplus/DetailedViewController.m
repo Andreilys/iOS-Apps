@@ -11,7 +11,14 @@
 
 
 @interface DetailedViewController ()
-
+{
+    NSString *detailNameValue;
+    NSString *detailDosageValue;
+    NSString *detailTypeValue;
+    NSString *detailDescriptionValue;
+    NSString *detailSourceValue;
+    NSString *detailVoteValue;
+}
 
 @end
 
@@ -33,6 +40,14 @@
                 self.typeValue.text = object[@"Type"];
                 self.descriptionValue.text = object[@"Description"];
                 self.sourceValue.text = object[@"Source"];
+                
+                //need to save to the nss strings so that when fav button is pressed, we can assign them
+                detailNameValue = self.nameValue.text;
+                detailDosageValue = self.dosageValue.text;
+                detailTypeValue = self.typeValue.text;
+                detailDescriptionValue = self.descriptionValue.text;
+                detailSourceValue = self.sourceValue.text;
+                detailVoteValue = object[@"VoteValue"];
             }
         } else {
             // Log details of the failure
@@ -43,25 +58,54 @@
     
 }
 
+
 - (IBAction)favoriteButton:(id)sender {
     //need to query object to save the votevalue in Parse
-    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Name" equalTo:self.nootropicName];
+    PFQuery *query = [PFQuery queryWithClassName:@"userFavorites"];
+    [query whereKey:@"Author" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        //this is for the case when user has no objects saved already to favorites
+        if([objects count] == 0){
+            PFObject *userFavorites = [PFObject objectWithClassName:@"userFavorites"];
+            userFavorites[@"Type"] = detailTypeValue;
+            userFavorites[@"Name"] = detailNameValue;
+            userFavorites[@"Dosage"] = detailDosageValue;
+            userFavorites[@"Description"] = detailDescriptionValue;
+            userFavorites[@"VoteValue"] = detailVoteValue;
+            userFavorites[@"Source"] = detailSourceValue;
+            userFavorites[@"Author"] = [PFUser currentUser];
+            [userFavorites saveInBackground];
+        }
+        
+        NSObject *lastObject = [objects lastObject];
         if (!error) {
             for (PFObject *object in objects){
-                if ([object[@"Favorite"]  isEqual: @"True"]) {
-                    object[@"Favorite"] = @"False";
-                    [object saveInBackground];
+                if (object == lastObject) {
+                    //this checks to see if we already have the object in the userFavorites column
+                    if ([object[@"Name"] isEqualToString:self.nameValue.text]) {
+                        [object deleteInBackground];
+                        NSLog(@"delete completed FINAL");
+                    }
+                    else {
+                        //saving the object to Parse
+                        PFObject *userFavorites = [PFObject objectWithClassName:@"userFavorites"];
+                        userFavorites[@"Type"] = detailTypeValue;
+                        userFavorites[@"Name"] = detailNameValue;
+                        userFavorites[@"Dosage"] = detailDosageValue;
+                        userFavorites[@"Description"] = detailDescriptionValue;
+                        userFavorites[@"VoteValue"] = detailVoteValue;
+                        userFavorites[@"Source"] = detailSourceValue;
+                        userFavorites[@"Author"] = [PFUser currentUser];
+                        [userFavorites saveInBackground];
+                    }
                 }
-                else {
-                    object[@"Favorite"] = @"True";
-                    [object saveInBackground];
+                else if ([object[@"Name"] isEqualToString:self.nameValue.text]) {
+                    [object deleteInBackground];
+                    NSLog(@"delete completed!!");
+                    break;
                 }
             }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
 
@@ -76,14 +120,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
-{
-    if (item.tag == 1){
-        [self performSegueWithIdentifier:@"showFavorites" sender:self];
-    }
-}
-
 /*
 #pragma mark - Navigation
 

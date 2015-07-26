@@ -37,6 +37,7 @@
 		279551851B6213D200152FBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273429281B4FB75C009FCB27 /* main.m */; };
 		27B665501B5F2C7100468B41 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B6654F1B5F2C7100468B41 /* MainTableViewController.m */; };
 		27B665531B5F2D8D00468B41 /* TypeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B665521B5F2D8D00468B41 /* TypeViewCell.m */; };
+		27EBD0281B64930300478798 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EBD0271B64930300478798 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		27B6654F1B5F2C7100468B41 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		27B665511B5F2D8D00468B41 /* TypeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeViewCell.h; sourceTree = "<group>"; };
 		27B665521B5F2D8D00468B41 /* TypeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeViewCell.m; sourceTree = "<group>"; };
+		27EBD0261B64930300478798 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		27EBD0271B64930300478798 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 			children = (
 				278423F61B60A89900A32428 /* ViewController.h */,
 				278423F71B60A89900A32428 /* ViewController.m */,
+				27EBD0261B64930300478798 /* LoginViewController.h */,
+				27EBD0271B64930300478798 /* LoginViewController.m */,
 				278423FC1B60A8A700A32428 /* registerViewController.h */,
 				278423FD1B60A8A700A32428 /* registerViewController.m */,
 				27B6654E1B5F2C7100468B41 /* MainTableViewController.h */,
@@ -346,6 +351,7 @@
 				279551841B6213A400152FBF /* Main.storyboard in Sources */,
 				27B665531B5F2D8D00468B41 /* TypeViewCell.m in Sources */,
 				27B665501B5F2C7100468B41 /* MainTableViewController.m in Sources */,
+				27EBD0281B64930300478798 /* LoginViewController.m in Sources */,
 				2778CC4C1B57396000AE9C59 /* SubmissionViewController.m in Sources */,
 				278423FE1B60A8A700A32428 /* registerViewController.m in Sources */,
 				2734292C1B4FB75C009FCB27 /* AppDelegate.m in Sources */,

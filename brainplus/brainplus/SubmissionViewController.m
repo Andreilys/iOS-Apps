@@ -79,7 +79,6 @@
         nootropicObject[@"Favorite"] = @"False";
         nootropicObject[@"Source"] = source;
         [nootropicObject saveInBackground];
-                NSLog(@"works");
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
 }

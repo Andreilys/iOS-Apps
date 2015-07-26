@@ -11,7 +11,6 @@
 #import "NSString+FormValidation.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -25,23 +24,6 @@
 
 
 //whenever login button is pressed
-- (IBAction)loginButtonPressed:(id)sender {
-    //launch the validate form to make sure what the user entered makes sense
-    [_spinner startAnimating];
-    [PFUser logInWithUsernameInBackground:self.userTextField.text
-                                 password:self.passwordTextField.text block:^(PFUser *user, NSError *error)
-     
-     {
-         if (!error) {
-             [_spinner stopAnimating];
-             [self performSegueWithIdentifier:@"showBrainPlus" sender:nil];
-         } else {
-             [[[UIAlertView alloc] initWithTitle:nil message:@"Username or Password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
-             
-         }
-     }];
-
-}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];

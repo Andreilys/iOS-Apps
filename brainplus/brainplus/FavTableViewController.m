@@ -24,9 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView reloadData];
     //I'm finding the object for social (this will have to adjust according to which button was pressed on home)
-    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Favorite" equalTo:@"True"];
+    PFQuery *query = [PFQuery queryWithClassName:@"userFavorites"];
+    [query whereKey:@"Author" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
@@ -69,9 +70,11 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [self.tableView reloadData];
+    NSLog(@"reload complete");
     //this is to make sure that whenever the view appears it shows the new objects
-    PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
-    [query whereKey:@"Favorite" equalTo:@"True"];
+    PFQuery *query = [PFQuery queryWithClassName:@"userFavorites"];
+    [query whereKey:@"Author" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             NSSortDescriptor *sortDescriptor;
