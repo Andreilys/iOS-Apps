@@ -1,0 +1,53 @@
+Important/Must need:
+Background for the 4 different categories
+logo+name for the app
+ability to upvote/downvote different supplements
+submission (and ability to pull from a database the information on the submission)
+ability to pull and show the information
+save a supplement to favorites
+create journal entries
+store and pull journal entries
+
+Nice to have:
+
+Step 0: DONE
+Create wireframes with POP
+
+Step 1: DONE
+Create the submission page, and have it deposit all the information to Parse
+
+Step 2: DONE
+create the unique view cell that will populate table view controller
+
+Step 3: DONE
+Table view should be able to pull info from Parse and display
+
+Step 4: DONE
+-Rearrange the cells based on the vote score
+
+Step 5: DONE
+Store in Parse the vote score, and be able to pull it to display
+
+Step 6: DONE
+Create the favorites page
+
+Step 7: DONE
+add an arrow key to show "more details"
+
+
+Step 8:
+UI/UX Work
+
+
+Bugs:
+Unknown class main in Interface Builder file.
+
+If you save something to favorites, it will be favorites for everyone, not just one person DONE
+make cells a lot bigger for clicking up and down DONE
+keyboard issue DONE
+make stuff scrollable DONE
+email field defaults to email keyboard (For registartion) 
+make the input field placeholders descriptive (for registration, etc) -> you actually don't need labels just use placeholders lmao DONE
+use spinner when registering to hide the content on regiser/login DONE
+also create a new view that has [login, register] which then leads to new views for [register] and [login] DONE
+-detail field still doesnt work when hitting return  DONE
