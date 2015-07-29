@@ -52,3 +52,4 @@ use spinner when registering to hide the content on regiser/login DONE
 also create a new view that has [login, register] which then leads to new views for [register] and [login] DONE
 -detail field still doesnt work when hitting return DONE
 add refresh option
+-need to add spinner to hide textview, etc. when loading detailed view

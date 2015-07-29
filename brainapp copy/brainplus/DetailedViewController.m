@@ -18,6 +18,15 @@
     NSString *detailDescriptionValue;
     NSString *detailSourceValue;
     NSString *detailVoteValue;
+    __weak IBOutlet UIActivityIndicatorView *spinner;
+    __weak IBOutlet UILabel *nameLabel;
+    __weak IBOutlet UILabel *dosageLabel;
+    __weak IBOutlet UILabel *typeLabel;
+    __weak IBOutlet UILabel *sourceLabel;
+    __weak IBOutlet UITextField *nameTextBox;
+    __weak IBOutlet UITextField *dosageTextBox;
+    __weak IBOutlet UITextField *typeTextBox;
+    __weak IBOutlet UITextField *sourceTextBox;
 }
 
 @end
@@ -25,6 +34,7 @@
 @implementation DetailedViewController
 
 - (void)viewDidLoad {
+    [spinner startAnimating];
     [super viewDidLoad];
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
     
@@ -47,6 +57,18 @@
                 detailDescriptionValue = self.descriptionValue.text;
                 detailSourceValue = self.sourceValue.text;
                 detailVoteValue = object[@"VoteValue"];
+                
+                //Need to unhide after everything loads
+                [nameLabel setHidden:NO];
+                [dosageLabel setHidden:NO];
+                [typeLabel setHidden:NO];
+                [sourceLabel setHidden:NO];
+                [nameTextBox setHidden:NO];
+                [dosageTextBox setHidden:NO];
+                [sourceTextBox setHidden:NO];
+                [typeTextBox setHidden:NO];
+                [self.descriptionValue setHidden:NO];
+                [spinner stopAnimating];
             }
         } else {
             // Log details of the failure
