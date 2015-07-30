@@ -66,6 +66,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidLoad];
+
     //this is to make sure that whenever the view appears it shows the new objects
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
     [query whereKey:@"Type" equalTo:self.nootropicTypeValue];
@@ -102,7 +104,6 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,6 +132,9 @@
     [cell.upvoteButton addTarget:self action:@selector(upVoteClicked:) forControlEvents:UIControlEventTouchUpInside];
     cell.downvoteButton.tag = newIndexPath*100;
     [cell.downvoteButton addTarget:self action:@selector(downVoteClicked:) forControlEvents:UIControlEventTouchUpInside];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [cell.contentView.layer setBorderColor:[UIColor blackColor].CGColor];
+    [cell.contentView.layer setBorderWidth:1.0f];
     return cell;
 }
 

@@ -126,6 +126,8 @@
     cell.voteValue.text = [NSString stringWithFormat:@"%@",[nootropicsVoteValueArray objectAtIndex:indexPath.row]];
     cell.downvoteButton.enabled = NO;
     cell.upvoteButton.enabled = NO;
+    [cell.contentView.layer setBorderColor:[UIColor blackColor].CGColor];
+    [cell.contentView.layer setBorderWidth:1.0f];
    return cell;
 }
 
