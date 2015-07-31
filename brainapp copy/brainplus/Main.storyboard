@@ -630,20 +630,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ba8-Vn-gaq">
-                                <rect key="frame" x="16" y="227" width="568" height="146"/>
-                                <color key="backgroundColor" red="0.73333333329999995" green="0.87058823529999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="14" width="568" height="572"/>
+                                <color key="backgroundColor" red="0.67226562499999998" green="0.83730468749999998" blue="0.99774169921875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.73333333329999995" green="0.87058823529999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">NootWork is a reddit-style community for users who are interested in learning more about Nootropics that help them increase their cognitive performance. All supplements must be legally approved in the U.S., and cannot include things like steroids or anything of that nature. Users who violate this will have their posts removed, and accounts revoked. </string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <mutableString key="text">NootWork is a reddit-style community for users who are interested in learning more about Nootropics that help them increase their cognitive performance. All supplements must be legally approved in the U.S., and cannot include things like steroids or anything of that nature. Users who violate this will have their posts removed, and accounts revoked. </mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.87058823529999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="V1w-g0-TCl" firstAttribute="top" secondItem="ba8-Vn-gaq" secondAttribute="bottom" constant="227" id="BPV-Zv-eKT"/>
-                            <constraint firstItem="ba8-Vn-gaq" firstAttribute="leading" secondItem="M7d-wb-bDg" secondAttribute="leadingMargin" id="IOq-j2-jPx"/>
-                            <constraint firstItem="ba8-Vn-gaq" firstAttribute="top" secondItem="FDR-hu-d9t" secondAttribute="bottom" constant="207" id="Z3f-ag-NxO"/>
-                            <constraint firstItem="ba8-Vn-gaq" firstAttribute="trailing" secondItem="M7d-wb-bDg" secondAttribute="trailingMargin" id="bQB-xl-3d6"/>
+                            <constraint firstItem="ba8-Vn-gaq" firstAttribute="leading" secondItem="M7d-wb-bDg" secondAttribute="leadingMargin" id="2Xi-eF-3Qk"/>
+                            <constraint firstItem="ba8-Vn-gaq" firstAttribute="centerY" secondItem="M7d-wb-bDg" secondAttribute="centerY" id="Gon-pn-N7v"/>
+                            <constraint firstItem="ba8-Vn-gaq" firstAttribute="trailing" secondItem="M7d-wb-bDg" secondAttribute="trailingMargin" id="V1D-EQ-JFd"/>
+                            <constraint firstItem="V1w-g0-TCl" firstAttribute="top" secondItem="ba8-Vn-gaq" secondAttribute="bottom" constant="14" id="ZId-U8-5ee"/>
                         </constraints>
                     </view>
                 </viewController>
