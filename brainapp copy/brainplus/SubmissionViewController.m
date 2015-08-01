@@ -116,22 +116,22 @@
 {
     switch (row) {
         case 0:
-        {NSString *title = @"Social";
+        {NSString *title = @"Work";
             NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
             
             return attString;}
         case 1:
-        {NSString *title = @"Relax";
-            NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-            
-            return attString;}
-        case 2:
         {NSString *title = @"Active";
             NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
             
             return attString;}
+        case 2:
+        {NSString *title = @"Social";
+            NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+            
+            return attString;}
         case 3:
-        {  NSString *title = @"Work";
+        {  NSString *title = @"Relax";
             NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
             return attString;
         }

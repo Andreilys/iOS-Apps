@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27328FA01B56839C005F057E /* What Needs To Be Done in Resources */ = {isa = PBXBuildFile; fileRef = 27328F9F1B56839C005F057E /* What Needs To Be Done */; };
 		2734292C1B4FB75C009FCB27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2734292B1B4FB75C009FCB27 /* AppDelegate.m */; };
 		273429341B4FB75C009FCB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273429331B4FB75C009FCB27 /* Images.xcassets */; };
 		273429371B4FB75C009FCB27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273429351B4FB75C009FCB27 /* LaunchScreen.xib */; };
@@ -51,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27328F9F1B56839C005F057E /* What Needs To Be Done */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "What Needs To Be Done"; path = "brainplus/What Needs To Be Done"; sourceTree = "<group>"; };
 		273429231B4FB75C009FCB27 /* brainplus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brainplus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273429271B4FB75C009FCB27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273429281B4FB75C009FCB27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 		2734291A1B4FB75C009FCB27 = {
 			isa = PBXGroup;
 			children = (
-				27328F9F1B56839C005F057E /* What Needs To Be Done */,
 				273429251B4FB75C009FCB27 /* brainplus */,
 				2734293F1B4FB75C009FCB27 /* brainplusTests */,
 				273429241B4FB75C009FCB27 /* Products */,
@@ -327,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27568F461B5B4EB600042722 /* Main.storyboard in Resources */,
-				27328FA01B56839C005F057E /* What Needs To Be Done in Resources */,
 				273429371B4FB75C009FCB27 /* LaunchScreen.xib in Resources */,
 				273429341B4FB75C009FCB27 /* Images.xcassets in Resources */,
 			);
@@ -430,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -467,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -480,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -498,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
