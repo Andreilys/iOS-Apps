@@ -13,10 +13,30 @@
 @end
 
 @implementation ViewController
+{
+    int counter;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+   
+}
+- (IBAction)zenButton:(id)sender {
+    [self.uncheckedButton setBackgroundImage:[UIImage imageNamed:@"ChallengeCounter"] forState:UIControlStateDisabled];
+    self.uncheckedButton.enabled = NO;
+    counter++;
+    self.challengeCounter.text = [NSString stringWithFormat:@"%d", counter];
+    
+    
+    //disable for the day
+   // self.uncheckedButton.enabled = NO;
+}
+- (IBAction)favoriteButton:(id)sender {
+    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"filledHeart"] forState:UIControlStateDisabled];
+    self.heartButton.enabled = NO;
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

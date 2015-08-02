@@ -11,5 +11,10 @@
 @interface ViewController : UIViewController
 
 
+@property (weak, nonatomic) IBOutlet UIButton *uncheckedButton;
+@property (weak, nonatomic) IBOutlet UILabel *challengeCounter;
+@property (weak, nonatomic) IBOutlet UIButton *heartButton;
+
+
 @end
 

@@ -504,6 +504,7 @@
 				272DA6961B6C73A90076B7D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		272DA6971B6C73A90076B7D2 /* Build configuration list for PBXNativeTarget "Project ZenTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +513,7 @@
 				272DA6991B6C73A90076B7D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
