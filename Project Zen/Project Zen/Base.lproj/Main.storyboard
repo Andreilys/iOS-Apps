@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="joE-t8-zNC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="AAK-Je-tWL">
+            <objects>
+                <navigationController id="joE-t8-zNC" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Euh-4J-goa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="t58-kN-YKM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWq-ti-qZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="336"/>
+        </scene>
+        <!--Project Zen-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -60,6 +77,24 @@
                                             <action selector="zenButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fni-4h-u77"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke3-cJ-8aR">
+                                        <rect key="frame" x="206" y="135" width="32" height="30"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Iq5-92-jj6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqp-sC-PV4">
+                                        <rect key="frame" x="8" y="135" width="35" height="30"/>
+                                        <state key="normal" title="Load">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loadButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1TN-j3-yjX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vYo-nh-kSs" firstAttribute="leading" secondItem="xpU-yc-zz3" secondAttribute="leadingMargin" id="3bl-0l-5hw"/>
@@ -74,24 +109,6 @@
                                     <constraint firstItem="UOR-Mz-GCr" firstAttribute="centerX" secondItem="z7Z-Y4-2d0" secondAttribute="centerX" id="zIS-tn-ZxU"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Txd-9Z-QLJ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Project Zen" id="tU9-36-ig9">
-                                        <barButtonItem key="leftBarButtonItem" image="filledHeart" id="xup-ON-iqJ">
-                                            <color key="tintColor" red="1" green="0.18859912549999999" blue="0.12675569040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="hvG-ci-kgI" kind="presentation" id="93K-4a-rpU"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="settings" style="done" id="Tsj-YY-I0K">
-                                            <connections>
-                                                <segue destination="UqJ-RS-ERj" kind="presentation" id="Lzu-kG-800"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChallengeCounter" translatesAutoresizingMaskIntoConstraints="NO" id="14M-Qa-wxD">
                                 <rect key="frame" x="279" y="64" width="41" height="41"/>
                                 <color key="tintColor" red="0.27002669880000002" green="1" blue="0.37939065049999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,30 +125,42 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Txd-9Z-QLJ" firstAttribute="centerX" secondItem="xpU-yc-zz3" secondAttribute="centerX" id="4cS-Co-FiK"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xpU-yc-zz3" secondAttribute="bottom" constant="202" id="DLo-Za-meg"/>
                             <constraint firstItem="KBz-1r-qbd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-6" id="JcK-Oh-6D9"/>
-                            <constraint firstItem="Txd-9Z-QLJ" firstAttribute="trailing" secondItem="14M-Qa-wxD" secondAttribute="trailing" id="LdU-gQ-sH2"/>
                             <constraint firstItem="xpU-yc-zz3" firstAttribute="centerY" secondItem="KBz-1r-qbd" secondAttribute="centerY" id="Lkp-eK-bkX"/>
                             <constraint firstItem="xpU-yc-zz3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="18" id="NCR-bB-mVl"/>
-                            <constraint firstAttribute="trailing" secondItem="Txd-9Z-QLJ" secondAttribute="trailing" id="WbF-Rk-p9I"/>
+                            <constraint firstItem="WsE-MQ-ygy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="X6C-ZG-W3h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KBz-1r-qbd" secondAttribute="trailing" constant="-42" id="a5S-TG-4bs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WsE-MQ-ygy" secondAttribute="trailing" constant="-11" id="arG-O6-ZNp"/>
                             <constraint firstAttribute="bottomMargin" secondItem="KBz-1r-qbd" secondAttribute="bottom" constant="-5" id="bqm-QH-59L"/>
                             <constraint firstItem="bSb-UD-Xjh" firstAttribute="top" secondItem="14M-Qa-wxD" secondAttribute="bottom" constant="97" id="djP-8R-v3E"/>
                             <constraint firstItem="bSb-UD-Xjh" firstAttribute="trailing" secondItem="xpU-yc-zz3" secondAttribute="trailing" id="euV-6a-6bw"/>
-                            <constraint firstItem="Txd-9Z-QLJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="gxw-mS-BFm"/>
+                            <constraint firstAttribute="trailing" secondItem="14M-Qa-wxD" secondAttribute="trailing" id="gNo-Gp-Pbv"/>
                             <constraint firstItem="KBz-1r-qbd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-24" id="ieU-RY-HpC"/>
+                            <constraint firstItem="xpU-yc-zz3" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="kDh-iT-xDu"/>
                             <constraint firstItem="bSb-UD-Xjh" firstAttribute="leading" secondItem="xpU-yc-zz3" secondAttribute="leading" id="lG1-Kd-rfF"/>
-                            <constraint firstItem="Txd-9Z-QLJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="nQX-VL-O7f"/>
                             <constraint firstItem="bSb-UD-Xjh" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="tLO-9K-Gtu"/>
                             <constraint firstItem="14M-Qa-wxD" firstAttribute="top" secondItem="WsE-MQ-ygy" secondAttribute="top" id="w87-SN-iuv"/>
-                            <constraint firstItem="14M-Qa-wxD" firstAttribute="top" secondItem="Txd-9Z-QLJ" secondAttribute="bottom" id="xP2-ZG-3vZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Project Zen" id="QsT-Z6-eyh">
+                        <barButtonItem key="leftBarButtonItem" image="filledHeart" id="gh0-pE-dxJ">
+                            <color key="tintColor" red="1" green="0.18859912549999999" blue="0.12675569040000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="hvG-ci-kgI" kind="show" id="pXc-0q-b9w"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="settings" style="done" id="a14-G7-PQM">
+                            <connections>
+                                <segue destination="UqJ-RS-ERj" kind="show" id="nDR-hZ-N2p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="challengeCounter" destination="WsE-MQ-ygy" id="67h-61-sLv"/>
+                        <outlet property="challengeLabel" destination="UOR-Mz-GCr" id="kFq-M3-y44"/>
+                        <outlet property="dayLabel" destination="vYo-nh-kSs" id="NMX-Gg-pVt"/>
                         <outlet property="heartButton" destination="ajt-vb-fMK" id="0gR-PN-Ocb"/>
                         <outlet property="uncheckedButton" destination="z7Z-Y4-2d0" id="Vk3-rr-gz0"/>
                     </connections>
@@ -142,7 +171,7 @@
         <!--View Controller-->
         <scene sceneID="7wc-35-Wiv">
             <objects>
-                <viewController id="UqJ-RS-ERj" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="UqJ-RS-ERj" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ttf-w7-jkV"/>
                         <viewControllerLayoutGuide type="bottom" id="rhB-qU-Yhu"/>
@@ -156,22 +185,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQA-ct-7RO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="1000"/>
+            <point key="canvasLocation" x="317" y="997"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Favorites Table View Controller-->
         <scene sceneID="cqL-zG-sCV">
             <objects>
-                <tableViewController id="hvG-ci-kgI" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7yO-z5-Weh">
+                <tableViewController id="hvG-ci-kgI" customClass="FavoritesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" id="7yO-z5-Weh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ewV-Z4-c6b">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" rowHeight="79" id="ewV-Z4-c6b" customClass="FavoriteCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ewV-Z4-c6b" id="41Y-0J-8FD">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBL-rG-LHS">
+                                            <rect key="frame" x="8" y="8" width="50" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-8P-Mxy">
+                                            <rect key="frame" x="286" y="5" width="26" height="24"/>
+                                            <state key="normal" image="filledHeart">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="unfavoriteButton:" destination="hvG-ci-kgI" eventType="touchUpInside" id="iUd-Oj-9iu"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahw-2J-7uH">
+                                            <rect key="frame" x="66" y="28" width="254" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="challengeValue" destination="ahw-2J-7uH" id="Wl9-Cz-eKh"/>
+                                    <outlet property="dayValue" destination="vBL-rG-LHS" id="4Ot-P4-avQ"/>
+                                    <outlet property="filledHeart" destination="hM9-8P-Mxy" id="85t-mW-ag7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -183,7 +240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sc5-8g-vB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="352"/>
+            <point key="canvasLocation" x="690" y="336"/>
         </scene>
     </scenes>
     <resources>

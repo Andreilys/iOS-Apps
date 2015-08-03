@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *uncheckedButton;
 @property (weak, nonatomic) IBOutlet UILabel *challengeCounter;
 @property (weak, nonatomic) IBOutlet UIButton *heartButton;
+@property (weak, nonatomic) IBOutlet UILabel *dayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *challengeLabel;
 
 
 @end

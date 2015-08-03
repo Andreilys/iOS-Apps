@@ -1,6 +1,9 @@
 Technical Challenges:
 
 1) So I need to use core data to save the user info, and be able to look it up
+-basically whenever someone clicks the heart, I want to be able to save it to "user favorites"
+-I want to save 2 objects to it (day label + quote label)
+
 2) I need to use local notifications to push information to the users device
 3) Playing sound
 4) loading quotes from parse server

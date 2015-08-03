@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //I'm finding the object for social (this will have to adjust according to which button was pressed on home)
+    //this is basically getting all the data from parse so that I can setup the table view controller
     PFQuery *query = [PFQuery queryWithClassName:@"Nootropic"];
     [query whereKey:@"Type" equalTo:self.nootropicTypeValue];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

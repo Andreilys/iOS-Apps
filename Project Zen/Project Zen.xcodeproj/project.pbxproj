@@ -31,6 +31,8 @@
 		272DA6B71B6C742C0076B7D2 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272DA6B61B6C742C0076B7D2 /* libz.1.1.3.dylib */; };
 		272DA6B91B6C74360076B7D2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272DA6B81B6C74360076B7D2 /* libsqlite3.dylib */; };
 		272DA6C11B6C8A180076B7D2 /* Plan in Resources */ = {isa = PBXBuildFile; fileRef = 272DA6C01B6C8A180076B7D2 /* Plan */; };
+		27F56B001B6EF54700589A26 /* FavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F56AFF1B6EF54700589A26 /* FavoriteCell.m */; };
+		27F56B031B6EF88400589A26 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		272DA6B61B6C742C0076B7D2 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		272DA6B81B6C74360076B7D2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		272DA6C01B6C8A180076B7D2 /* Plan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Plan; path = "Project Zen/Plan"; sourceTree = "<group>"; };
+		27F56AFE1B6EF54700589A26 /* FavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCell.h; sourceTree = "<group>"; };
+		27F56AFF1B6EF54700589A26 /* FavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCell.m; sourceTree = "<group>"; };
+		27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,10 @@
 				272DA67B1B6C73A90076B7D2 /* ViewController.h */,
 				272DA67C1B6C73A90076B7D2 /* ViewController.m */,
 				272DA67E1B6C73A90076B7D2 /* Main.storyboard */,
+				27F56AFE1B6EF54700589A26 /* FavoriteCell.h */,
+				27F56AFF1B6EF54700589A26 /* FavoriteCell.m */,
+				27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */,
+				27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */,
 				272DA6811B6C73A90076B7D2 /* Images.xcassets */,
 				272DA6831B6C73A90076B7D2 /* LaunchScreen.xib */,
 				272DA6741B6C73A90076B7D2 /* Supporting Files */,
@@ -296,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				272DA67D1B6C73A90076B7D2 /* ViewController.m in Sources */,
+				27F56B001B6EF54700589A26 /* FavoriteCell.m in Sources */,
 				272DA67A1B6C73A90076B7D2 /* AppDelegate.m in Sources */,
+				27F56B031B6EF88400589A26 /* FavoritesTableViewController.m in Sources */,
 				272DA6771B6C73A90076B7D2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
