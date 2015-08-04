@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *heartButton;
 @property (weak, nonatomic) IBOutlet UILabel *dayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *challengeLabel;
+@property (weak,nonatomic) NSDate *startDate;
 
 
 @end

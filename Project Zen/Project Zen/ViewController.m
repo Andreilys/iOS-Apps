@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DateModel.h"
 
 @interface ViewController ()
 
@@ -19,12 +20,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //this will be the start date for the challenge
+    NSDate *startingDate = self.startDate;
+    startingDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"startDate"];
+  
+    DateModel *dateModelClass = [[DateModel alloc] init];
 
-   
+    //need to check if we already set the standard user default
+    if(startingDate){
+        //this finds the difference in the dates to see if there is a new day
+        double differenceInDate = [dateModelClass findChallengeDate:startingDate];
+        
+        [dateModelClass showChallenge:differenceInDate];
+        
+    } else{
+        //set the start date for the challenge, and save to user default
+        startingDate = [dateModelClass getDate];
+        [[NSUserDefaults standardUserDefaults] setObject:self.startDate forKey:@"startDate"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSLog(@"damn");
+    }
+    
+    
+
 }
+
+
+
 - (IBAction)loadButton:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSArray *favorites = [defaults objectForKey:@"favorites"];
+
 }
 
 //testing purposes
@@ -54,6 +78,7 @@
         favorites = [[NSMutableArray alloc] init];
     }
     
+
     [favorites addObject:fav];
     [defaults setObject:favorites forKey:@"favorites"];
     [defaults synchronize];

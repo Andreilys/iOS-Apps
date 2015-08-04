@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWq-ti-qZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="336"/>
+            <point key="canvasLocation" x="-199" y="336"/>
         </scene>
         <!--Project Zen-->
         <scene sceneID="ufC-wZ-h7g">
@@ -78,7 +78,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke3-cJ-8aR">
-                                        <rect key="frame" x="206" y="135" width="32" height="30"/>
+                                        <rect key="frame" x="212" y="127" width="32" height="30"/>
                                         <state key="normal" title="Next">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -87,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqp-sC-PV4">
-                                        <rect key="frame" x="8" y="135" width="35" height="30"/>
+                                        <rect key="frame" x="8" y="127" width="35" height="30"/>
                                         <state key="normal" title="Load">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -167,6 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="241" y="336"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7wc-35-Wiv">
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQA-ct-7RO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="997"/>
+            <point key="canvasLocation" x="241" y="1007"/>
         </scene>
         <!--Favorites Table View Controller-->
         <scene sceneID="cqL-zG-sCV">
@@ -212,9 +213,6 @@
                                             <state key="normal" image="filledHeart">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <connections>
-                                                <action selector="unfavoriteButton:" destination="hvG-ci-kgI" eventType="touchUpInside" id="iUd-Oj-9iu"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahw-2J-7uH">
                                             <rect key="frame" x="66" y="28" width="254" height="21"/>

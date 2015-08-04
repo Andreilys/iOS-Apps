@@ -15,16 +15,17 @@
 
 @implementation FavoritesTableViewController
 {
-    NSArray *favoritesArray;
+    NSMutableArray *favoritesArray;
+    NSMutableArray *newFavoritesArray;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    favoritesArray = [defaults objectForKey:@"favorites"];
-    NSLog(@"%d", [favoritesArray count]);
-    NSLog(@"works?");
-    // Uncomment the following line to preserve selection between presentations.
+    //since nsuserdefaults returns an immutable type, it is important to create a mutable copy
+    favoritesArray = [[[NSUserDefaults standardUserDefaults] objectForKey:@"favorites"] mutableCopy];
+    
+    
+     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -58,16 +59,32 @@
     int row = indexPath.row;
     //create the cell
     FavoriteCell *cell = (FavoriteCell *)[tableView dequeueReusableCellWithIdentifier:@"FavoriteCell"];
-    cell.filledHeart.tag = row + 1;
     cell.dayValue.text = favoritesArray[row][@"Day"];
     cell.challengeValue.text = favoritesArray[row][@"Challenge"];
     return cell;
 }
 
 
-//need to be able to unfavorite
-- (IBAction)unfavoriteButton:(id)sender {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //removing object from favorites index
+    [favoritesArray removeObjectAtIndex:indexPath.row];
+    //adding favorites array to newfavorites array
+    newFavoritesArray = favoritesArray;
+
+    //removing all account of favorites from nsuserdefaults
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"favorites"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
+    //new array being added back to user defaults
+    [[NSUserDefaults standardUserDefaults] setObject: newFavoritesArray forKey: @"favorites"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    // Remove the row from data model
+    
+    
+    
+    // Request table view to reload
+    [tableView reloadData];
 }
 
 
