@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "DateModel.h"
+#import "OnboardingContentViewController.h"
+#import "OnboardingViewController.h"
 
 @interface ViewController ()
 
@@ -20,6 +22,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:nil buttonText:@"Text For Button" action:^{
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+    }];
+    
+    OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:nil buttonText:@"Text For Button" action:^{
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+    }];
+    
+    OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:nil buttonText:@"Text For Button" action:^{
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+    }];
+    
+    
+    
+    // Image
+    OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"nature"] contents:@[firstPage, secondPage, thirdPage]];
+       
+    [self presentViewController:onboardingVC animated:YES completion: nil];
+    
+    
+
+    
     //this will be the start date for the challenge
     NSDate *startingDate = self.startDate;
     startingDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"startDate"];
@@ -30,8 +55,11 @@
     if(startingDate){
         //this finds the difference in the dates to see if there is a new day
         double differenceInDate = [dateModelClass findChallengeDate:startingDate];
-        
-        [dateModelClass showChallenge:differenceInDate];
+
+        //returns a dictionary which I can pull info from
+        NSDictionary *challenge = [dateModelClass showChallenge:differenceInDate];
+        self.dayLabel.text = challenge[@"Day"];
+        self.challengeLabel.text = challenge[@"Challenge"];
         
     } else{
         //set the start date for the challenge, and save to user default

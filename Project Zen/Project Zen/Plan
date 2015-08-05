@@ -1,15 +1,8 @@
 Technical Challenges:
 
-1) So I need to use core data to save the user info, and be able to look it up
--basically whenever someone clicks the heart, I want to be able to save it to "user favorites"
--I want to save 2 objects to it (day label + quote label)
-
-2) I need to use local notifications to push information to the users device
-3) Playing sound
-4) loading quotes from parse server
-
-Ok so basically 31 days of Zen, each day gives a new zen challenge, you check off if oyu compleed or not.
-
-sends local push notifications in the morning and the evening.
-
-pulls the challenges from the Parse backend, that way each month I can load new zen challenges (if I need to)
+-Play sound
+-local notifications (evening and morning)
+-find 31 challenges+photos
+-update settings wheel
+-have a way to send photos
+-create a user onboarding experience

@@ -13,7 +13,9 @@
 -(NSDate *) getDate;
 -(double)findChallengeDate:(NSDate *)startingDate;
 @property (nonatomic) NSDate *date;
--(void)showChallenge:(double)differenceInDate;
+-(NSDictionary *)showChallenge:(double)differenceInDate;
+@property (nonatomic, weak) NSString *dayLabel;
+@property (nonatomic, weak) NSString *challengeLabel;
 
 
 @end
