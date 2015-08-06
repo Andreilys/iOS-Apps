@@ -1,8 +1,14 @@
 Technical Challenges:
 
--Play sound
--local notifications (evening and morning)
--find 31 challenges+photos
--update settings wheel
--have a way to send photos
+
+
+Thursday, August 6
+-> Find 31 challenges
+->Update settings wheel DONE
+-> Logo DONE
+->update local notifications
+
+Friday, August 7
+-> find a way to play sound with local notification
 -create a user onboarding experience
+(https://github.com/mamaral/Onboard)

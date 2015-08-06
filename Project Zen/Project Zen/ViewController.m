@@ -10,6 +10,7 @@
 #import "DateModel.h"
 #import "OnboardingContentViewController.h"
 #import "OnboardingViewController.h"
+#import "settingNotificationsModel.h"
 
 @interface ViewController ()
 
@@ -23,24 +24,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:nil buttonText:@"Text For Button" action:^{
-        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
-    }];
-    
-    OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:nil buttonText:@"Text For Button" action:^{
-        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
-    }];
-    
-    OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Page Title" body:@"Page body goes here." image:nil buttonText:@"Text For Button" action:^{
-        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
-    }];
-    
-    
-    
-    // Image
-    OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"nature"] contents:@[firstPage, secondPage, thirdPage]];
-       
-    [self presentViewController:onboardingVC animated:YES completion: nil];
+//    
+//    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Project Zen" body:@"Become more Zen." image:nil buttonText:nil action:^{
+//        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+//    }];
+//    
+//    OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Project Zen" body:@"Zen time is now time." image:nil buttonText:@"Agree to Notifications" action:^{
+//        
+//        settingNotificationsModel *notification = [[settingNotificationsModel alloc] init];
+//        
+//        [notification setNotifications];
+//
+//        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+//    }];
+//    
+//    OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Project Zen" body:@"Page body goes here." image:nil buttonText:@"Become Zen" action:^{
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    
+//    
+//    
+//    // Image
+//    OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"nature"] contents:@[firstPage, secondPage, thirdPage]];
+//    
+//    onboardingVC.fontName = @"Helvetica-Light";
+//    onboardingVC.titleFontSize = 28;
+//    onboardingVC.bodyFontSize = 22;
+//    onboardingVC.topPadding = 20;
+//    onboardingVC.underIconPadding = 10;
+//    onboardingVC.underTitlePadding = 15;
+//    onboardingVC.bottomPadding = 20;
+//       
+//    [self presentViewController:onboardingVC animated:YES completion: nil];
     
     
 
@@ -53,10 +68,10 @@
 
     //need to check if we already set the standard user default
     if(startingDate){
-        //this finds the difference in the dates to see if there is a new day
+        //this finds the difference in the dates to see if there is a new day, using the datemodel object.
         double differenceInDate = [dateModelClass findChallengeDate:startingDate];
 
-        //returns a dictionary which I can pull info from
+        //returns a dictionary which I can pull info from, the input is the differenceDate which shows how much of a difference there is from the START date and the CURRENT date
         NSDictionary *challenge = [dateModelClass showChallenge:differenceInDate];
         self.dayLabel.text = challenge[@"Day"];
         self.challengeLabel.text = challenge[@"Challenge"];
@@ -64,8 +79,12 @@
     } else{
         //set the start date for the challenge, and save to user default
         startingDate = [dateModelClass getDate];
-        [[NSUserDefaults standardUserDefaults] setObject:self.startDate forKey:@"startDate"];
+        [[NSUserDefaults standardUserDefaults] setObject:startingDate forKey:@"startDate"];
+        
+    
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
         NSLog(@"damn");
     }
     

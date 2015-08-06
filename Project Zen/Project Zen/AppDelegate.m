@@ -25,14 +25,10 @@
                   clientKey:@"oWJ7qZ4jvdSnO4BXgZ75trWh74yGfrwBCYiH7svJ"];
     // Override point for customization after application launch.
     
-    // Register for Push Notitications
-    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
-                                                    UIUserNotificationTypeBadge |
-                                                    UIUserNotificationTypeSound);
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-                                                                             categories:nil];
-    [application registerUserNotificationSettings:settings];
-    [application registerForRemoteNotifications];
+    
+    //reset badge count
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
     
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];

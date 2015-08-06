@@ -16,8 +16,11 @@
 		272DA6851B6C73A90076B7D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272DA6831B6C73A90076B7D2 /* LaunchScreen.xib */; };
 		272DA6911B6C73A90076B7D2 /* Project_ZenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272DA6901B6C73A90076B7D2 /* Project_ZenTests.m */; };
 		272DA6C11B6C8A180076B7D2 /* Plan in Resources */ = {isa = PBXBuildFile; fileRef = 272DA6C01B6C8A180076B7D2 /* Plan */; };
+		273D70841B72F1C000AD6C89 /* settingNotificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 273D70831B72F1C000AD6C89 /* settingNotificationsModel.m */; };
 		27F56B001B6EF54700589A26 /* FavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F56AFF1B6EF54700589A26 /* FavoriteCell.m */; };
 		27F56B031B6EF88400589A26 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */; };
+		46F8F1AB6FFCD564B2943ACE /* libPods-Project Zen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C62C5CE834B30F45F5B115A /* libPods-Project Zen.a */; };
+		61861DF96FD3A9D7E2E80685 /* libPods-Project ZenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 821C3DCD6C014EE7F65AD1FD /* libPods-Project ZenTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,12 +51,16 @@
 		272DA68F1B6C73A90076B7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272DA6901B6C73A90076B7D2 /* Project_ZenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_ZenTests.m; sourceTree = "<group>"; };
 		272DA6C01B6C8A180076B7D2 /* Plan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Plan; path = "Project Zen/Plan"; sourceTree = "<group>"; };
+		273D70821B72F1C000AD6C89 /* settingNotificationsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingNotificationsModel.h; sourceTree = "<group>"; };
+		273D70831B72F1C000AD6C89 /* settingNotificationsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingNotificationsModel.m; sourceTree = "<group>"; };
 		27F56AFE1B6EF54700589A26 /* FavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCell.h; sourceTree = "<group>"; };
 		27F56AFF1B6EF54700589A26 /* FavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCell.m; sourceTree = "<group>"; };
 		27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
 		27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
 		62D561C790C504A173607EBC /* Pods-Project Zen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Zen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Zen/Pods-Project Zen.release.xcconfig"; sourceTree = "<group>"; };
+		6C62C5CE834B30F45F5B115A /* libPods-Project Zen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project Zen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8C6C22114C6EDEADD4158F /* Pods-Project Zen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Zen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Zen/Pods-Project Zen.debug.xcconfig"; sourceTree = "<group>"; };
+		821C3DCD6C014EE7F65AD1FD /* libPods-Project ZenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project ZenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96419FA4DF650C532E17369F /* Pods-Project ZenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project ZenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project ZenTests/Pods-Project ZenTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F8F1AB6FFCD564B2943ACE /* libPods-Project Zen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61861DF96FD3A9D7E2E80685 /* libPods-Project ZenTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,7 @@
 				272DA68D1B6C73A90076B7D2 /* Project ZenTests */,
 				272DA6721B6C73A80076B7D2 /* Products */,
 				265E4DD2DD5C8090412706AE /* Pods */,
+				F52B16C1F6C025664C0C75C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,13 +119,12 @@
 		272DA6731B6C73A90076B7D2 /* Project Zen */ = {
 			isa = PBXGroup;
 			children = (
+				272DA67E1B6C73A90076B7D2 /* Main.storyboard */,
 				272DA6781B6C73A90076B7D2 /* AppDelegate.h */,
 				272DA6791B6C73A90076B7D2 /* AppDelegate.m */,
 				272DA67B1B6C73A90076B7D2 /* ViewController.h */,
 				272DA67C1B6C73A90076B7D2 /* ViewController.m */,
-				27144E881B70A161000D2542 /* DateModel.h */,
-				27144E891B70A161000D2542 /* DateModel.m */,
-				272DA67E1B6C73A90076B7D2 /* Main.storyboard */,
+				273D70851B72F23D00AD6C89 /* Models */,
 				27F56AFE1B6EF54700589A26 /* FavoriteCell.h */,
 				27F56AFF1B6EF54700589A26 /* FavoriteCell.m */,
 				27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */,
@@ -151,6 +160,26 @@
 				272DA68F1B6C73A90076B7D2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		273D70851B72F23D00AD6C89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				273D70821B72F1C000AD6C89 /* settingNotificationsModel.h */,
+				273D70831B72F1C000AD6C89 /* settingNotificationsModel.m */,
+				27144E881B70A161000D2542 /* DateModel.h */,
+				27144E891B70A161000D2542 /* DateModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F52B16C1F6C025664C0C75C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C62C5CE834B30F45F5B115A /* libPods-Project Zen.a */,
+				821C3DCD6C014EE7F65AD1FD /* libPods-Project ZenTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273D70841B72F1C000AD6C89 /* settingNotificationsModel.m in Sources */,
 				272DA67D1B6C73A90076B7D2 /* ViewController.m in Sources */,
 				27F56B001B6EF54700589A26 /* FavoriteCell.m in Sources */,
 				272DA67A1B6C73A90076B7D2 /* AppDelegate.m in Sources */,
