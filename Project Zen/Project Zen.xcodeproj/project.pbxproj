@@ -95,6 +95,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		270EF8841B744D50007AACB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				272DA67B1B6C73A90076B7D2 /* ViewController.h */,
+				272DA67C1B6C73A90076B7D2 /* ViewController.m */,
+				27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */,
+				27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		272DA6681B6C73A80076B7D2 = {
 			isa = PBXGroup;
 			children = (
@@ -120,15 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				272DA67E1B6C73A90076B7D2 /* Main.storyboard */,
-				272DA6781B6C73A90076B7D2 /* AppDelegate.h */,
-				272DA6791B6C73A90076B7D2 /* AppDelegate.m */,
-				272DA67B1B6C73A90076B7D2 /* ViewController.h */,
-				272DA67C1B6C73A90076B7D2 /* ViewController.m */,
+				270EF8841B744D50007AACB6 /* Controller */,
 				273D70851B72F23D00AD6C89 /* Models */,
-				27F56AFE1B6EF54700589A26 /* FavoriteCell.h */,
-				27F56AFF1B6EF54700589A26 /* FavoriteCell.m */,
-				27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */,
-				27F56B021B6EF88400589A26 /* FavoritesTableViewController.m */,
 				272DA6811B6C73A90076B7D2 /* Images.xcassets */,
 				272DA6831B6C73A90076B7D2 /* LaunchScreen.xib */,
 				272DA6741B6C73A90076B7D2 /* Supporting Files */,
@@ -139,6 +143,8 @@
 		272DA6741B6C73A90076B7D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				272DA6781B6C73A90076B7D2 /* AppDelegate.h */,
+				272DA6791B6C73A90076B7D2 /* AppDelegate.m */,
 				272DA6751B6C73A90076B7D2 /* Info.plist */,
 				272DA6761B6C73A90076B7D2 /* main.m */,
 			);
@@ -165,6 +171,8 @@
 		273D70851B72F23D00AD6C89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				27F56AFE1B6EF54700589A26 /* FavoriteCell.h */,
+				27F56AFF1B6EF54700589A26 /* FavoriteCell.m */,
 				273D70821B72F1C000AD6C89 /* settingNotificationsModel.h */,
 				273D70831B72F1C000AD6C89 /* settingNotificationsModel.m */,
 				27144E881B70A161000D2542 /* DateModel.h */,

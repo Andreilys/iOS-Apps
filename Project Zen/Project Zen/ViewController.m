@@ -24,38 +24,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    
-//    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Project Zen" body:@"Become more Zen." image:nil buttonText:nil action:^{
-//        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
-//    }];
-//    
-//    OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Project Zen" body:@"Zen time is now time." image:nil buttonText:@"Agree to Notifications" action:^{
-//        
-//        settingNotificationsModel *notification = [[settingNotificationsModel alloc] init];
-//        
-//        [notification setNotifications];
-//
-//        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
-//    }];
-//    
-//    OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Project Zen" body:@"Page body goes here." image:nil buttonText:@"Become Zen" action:^{
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//    }];
-//    
-//    
-//    
-//    // Image
-//    OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"nature"] contents:@[firstPage, secondPage, thirdPage]];
-//    
-//    onboardingVC.fontName = @"Helvetica-Light";
-//    onboardingVC.titleFontSize = 28;
-//    onboardingVC.bodyFontSize = 22;
-//    onboardingVC.topPadding = 20;
-//    onboardingVC.underIconPadding = 10;
-//    onboardingVC.underTitlePadding = 15;
-//    onboardingVC.bottomPadding = 20;
-//       
-//    [self presentViewController:onboardingVC animated:YES completion: nil];
+    
+    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"The Journey" body:@"Over the course of 31 days, this app will help create more space in your life. You will recieve a daily challenge that's aimed to make you more mindful, compassionate, and empathetic." image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Let's Do This!" action:^{
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+    }];
+    
+    firstPage.movesToNextViewController = YES;
+    firstPage.underIconPadding = 20;
+    
+    OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"The Tools" body:@"To help you, we'll send you two notifications, once in the morning, and once in the evening." image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Agreed" action:^{
+        
+        settingNotificationsModel *notification = [[settingNotificationsModel alloc] init];
+        
+        [notification setNotifications];
+
+        // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+    }];
+    
+    secondPage.movesToNextViewController = YES;
+       OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"The Challenge" body:@"Some of these challenges may be outside of your comfort zone and that's okay. Its important to occasionally push the boundaries of your comfort zone. You will have 24 hours to complete each challenge, starting from the moment you open the application - good luck!" image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Challenge Accepted" action:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    thirdPage.movesToNextViewController = YES;
+    
+    // Image
+    OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"nature"] contents:@[firstPage, secondPage, thirdPage]];
+    
+
+    onboardingVC.bodyTextColor = [UIColor colorWithRed:200.0f/255.0f
+                                              green:230.0f/255.0f
+                                               blue:201.0f/255.0f
+                                              alpha:1.0f];
+    onboardingVC.buttonTextColor = [UIColor colorWithRed:76.0f/255.0f
+                                                green:175.0f/255.0f
+                                                 blue:80.0f/255.0f
+                                                alpha:1.0f];
+    onboardingVC.titleTextColor = [UIColor colorWithRed:122.0f/255.0f
+                                               green:199.0f/255.0f
+                                                blue:132.0f/255.0f
+                                               alpha:1.0f];
+    onboardingVC.swipingEnabled = NO;
+    onboardingVC.fontName = @"Helvetica-Light";
+    onboardingVC.titleFontSize = 28;
+    onboardingVC.bodyFontSize = 22;
+    onboardingVC.topPadding = 20;
+    onboardingVC.underIconPadding = 10;
+    onboardingVC.underTitlePadding = 15;
+    onboardingVC.bottomPadding = 20;
+       
+    [self presentViewController:onboardingVC animated:NO completion: nil];
     
     
 
@@ -75,7 +93,15 @@
         NSDictionary *challenge = [dateModelClass showChallenge:differenceInDate];
         self.dayLabel.text = challenge[@"Day"];
         self.challengeLabel.text = challenge[@"Challenge"];
-        
+
+        self.dayLabel.textColor =  [UIColor colorWithRed:232.0f/255.0f
+                                                   green:245.0f/255.0f
+                                                    blue:233.0f/255.0f
+                                                   alpha:1.0f];
+        self.challengeLabel.textColor =  [UIColor colorWithRed:232.0f/255.0f
+                                                         green:245.0f/255.0f
+                                                          blue:233.0f/255.0f
+                                                         alpha:1.0f];
     } else{
         //set the start date for the challenge, and save to user default
         startingDate = [dateModelClass getDate];
@@ -94,19 +120,9 @@
 
 
 
-- (IBAction)loadButton:(id)sender {
-
-}
-
-//testing purposes
-- (IBAction)nextButton:(id)sender {
-    self.dayLabel.text = @"Day 2:";
-    self.challengeLabel.text = @"Meditate for 5 mins:";
-}
-
 - (IBAction)favoriteButton:(id)sender {
-//    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"filledHeart"] forState:UIControlStateDisabled];
-//    self.heartButton.enabled = NO;
+    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"filledHeart"] forState:UIControlStateDisabled];
+    self.heartButton.enabled = NO;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *favoritesLoaded = [defaults objectForKey:@"favorites"];

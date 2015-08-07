@@ -82,7 +82,7 @@
     }else if (difference < 5){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 5:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Meditate Under A Tree", @"Challenge",
                                        nil];
         return nextChallenge;
 

@@ -61,6 +61,14 @@
     FavoriteCell *cell = (FavoriteCell *)[tableView dequeueReusableCellWithIdentifier:@"FavoriteCell"];
     cell.dayValue.text = favoritesArray[row][@"Day"];
     cell.challengeValue.text = favoritesArray[row][@"Challenge"];
+    cell.challengeValue.textColor =  [UIColor colorWithRed:232.0f/255.0f
+                                                     green:245.0f/255.0f
+                                                      blue:233.0f/255.0f
+                                                     alpha:1.0f];
+    cell.dayValue.textColor =  [UIColor colorWithRed:232.0f/255.0f
+                                          green:245.0f/255.0f
+                                           blue:233.0f/255.0f
+                                          alpha:1.0f];
     return cell;
 }
 
