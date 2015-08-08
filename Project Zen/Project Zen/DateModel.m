@@ -29,7 +29,7 @@
     NSLog (@"start date: %@", startingDate);
     
     //testing purposes
-    int daysToAdd = 4;
+    int daysToAdd = 6;
     NSDate *newDate1 = [startingDate dateByAddingTimeInterval:60*60*24*daysToAdd];
     
     NSLog(@"newdate: %@", newDate1);
@@ -40,13 +40,6 @@
 
     return differenceInDate;
   }
-
-
-
-
-
-
-
 
 
 -(NSDictionary *)showChallenge:(double)difference

@@ -12,6 +12,8 @@
 @implementation settingNotificationsModel
 
 -(void)setNotifications{
+    
+    NSLog(@"setting notifcations is working");
     // Schedule the notification
     //-- Set Notification
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
@@ -32,12 +34,6 @@
     NSCalendar *gregorian = [[NSCalendar alloc] init];
     NSDate *date = [gregorian dateFromComponents:comps];
     
-    NSDateComponents *comps1 = [[NSDateComponents alloc] init];
-    [comps1 setDay:1];
-    [comps1 setHour:20];
-    [comps1 setMinute:00];
-    NSCalendar *gregorian1 = [[NSCalendar alloc] init];
-    NSDate *date1 = [gregorian1 dateFromComponents:comps];
     
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = date;
@@ -51,6 +47,13 @@
     
     
     //setting night notification
+    NSDateComponents *comps1 = [[NSDateComponents alloc] init];
+    [comps1 setDay:1];
+    [comps1 setHour:20];
+    [comps1 setMinute:00];
+    NSCalendar *gregorian1 = [[NSCalendar alloc] init];
+    NSDate *date1 = [gregorian1 dateFromComponents:comps];
+    
     UILocalNotification* localNightNotification = [[UILocalNotification alloc] init];
     localNightNotification.fireDate = date1;
     localNightNotification.alertBody = @"Yolo";
@@ -61,5 +64,9 @@
 
     [[UIApplication sharedApplication] scheduleLocalNotification:localNightNotification];
     
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *eventArray = [app scheduledLocalNotifications];
+    
+    NSLog(@"%@", eventArray);
 }
 @end

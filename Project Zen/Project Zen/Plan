@@ -10,5 +10,16 @@ Thursday, August 6
 
 Friday, August 7
 -> find a way to play sound with local notification
--create a user onboarding experience
+-create a user onboarding experience DONE
 (https://github.com/mamaral/Onboard)
+
+
+
+so basically what I want to do is when someone clicks heart or the zen buttoni want to save to the user defaults that this person now has favorited this
+
+-then when the view loads, I want to check if the person has favorited this or not. If they have, disable the button, if they havent enable the button
+
+
+PROBLEMS:
+-whenever you remove an item from favorites, it stil lsays its a favorite
+need to make it so that when you reload the viewcontroller screen it repopulates again

@@ -27,8 +27,7 @@
     
     
     //reset badge count
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-    
+    application.applicationIconBadgeNumber = 0; 
     
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];

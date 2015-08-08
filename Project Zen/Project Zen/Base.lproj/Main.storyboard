@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Evening Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF1-zX-x6j">
-                                <rect key="frame" x="16" y="116" width="162" height="21"/>
+                                <rect key="frame" x="16" y="281" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                                 <rect key="frame" x="255" y="72" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6m-P2-mAs">
-                                <rect key="frame" x="255" y="111" width="51" height="31"/>
+                                <rect key="frame" x="255" y="281" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Morning Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B19-8o-JQe">
                                 <rect key="frame" x="16" y="77" width="165" height="21"/>
@@ -183,7 +183,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JAf-iK-YU6">
-                                <rect key="frame" x="16" y="164" width="288" height="162"/>
+                                <rect key="frame" x="16" y="111" width="288" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="460517207.39291501">
+                                    <!--2015-08-06 01:26:47 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dvz-5I-6JR">
+                                <rect key="frame" x="16" y="320" width="288" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="460517207.39291501">
                                     <!--2015-08-06 01:26:47 +0000-->
                                 </date>
