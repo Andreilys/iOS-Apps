@@ -23,3 +23,9 @@ so basically what I want to do is when someone clicks heart or the zen buttoni w
 PROBLEMS:
 -whenever you remove an item from favorites, it stil lsays its a favorite
 need to make it so that when you reload the viewcontroller screen it repopulates again
+-make it so that you get rid of the flicker whenever you click a cell
+-need to make it when difference is above 31 that the person is done, and see if they want to reset the challenge
+-local notifications (make them work and be able to get disabled)
+-change text color of ui date picker
+-navigation text color on first page
+-31 challenges

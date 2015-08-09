@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27144E8A1B70A161000D2542 /* DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27144E891B70A161000D2542 /* DateModel.m */; };
+		272C8E751B771C26005D4E2C /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272C8E741B771C26005D4E2C /* settingsViewController.m */; };
 		272DA6771B6C73A90076B7D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 272DA6761B6C73A90076B7D2 /* main.m */; };
 		272DA67A1B6C73A90076B7D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 272DA6791B6C73A90076B7D2 /* AppDelegate.m */; };
 		272DA67D1B6C73A90076B7D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272DA67C1B6C73A90076B7D2 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 		11CAD85AE3DEC5A7EEE73DD0 /* Pods-Project ZenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project ZenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project ZenTests/Pods-Project ZenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27144E881B70A161000D2542 /* DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateModel.h; sourceTree = "<group>"; };
 		27144E891B70A161000D2542 /* DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateModel.m; sourceTree = "<group>"; };
+		272C8E731B771C26005D4E2C /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
+		272C8E741B771C26005D4E2C /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
 		272DA6711B6C73A80076B7D2 /* Project Zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Zen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		272DA6751B6C73A90076B7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272DA6761B6C73A90076B7D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 		270EF8841B744D50007AACB6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				272C8E731B771C26005D4E2C /* settingsViewController.h */,
+				272C8E741B771C26005D4E2C /* settingsViewController.m */,
 				272DA67B1B6C73A90076B7D2 /* ViewController.h */,
 				272DA67C1B6C73A90076B7D2 /* ViewController.m */,
 				27F56B011B6EF88400589A26 /* FavoritesTableViewController.h */,
@@ -361,6 +366,7 @@
 				273D70841B72F1C000AD6C89 /* settingNotificationsModel.m in Sources */,
 				272DA67D1B6C73A90076B7D2 /* ViewController.m in Sources */,
 				27F56B001B6EF54700589A26 /* FavoriteCell.m in Sources */,
+				272C8E751B771C26005D4E2C /* settingsViewController.m in Sources */,
 				272DA67A1B6C73A90076B7D2 /* AppDelegate.m in Sources */,
 				27F56B031B6EF88400589A26 /* FavoritesTableViewController.m in Sources */,
 				272DA6771B6C73A90076B7D2 /* main.m in Sources */,

@@ -27,20 +27,6 @@
     NSString *userOnBoarded;
     userOnBoarded = [defaults objectForKey:@"onboarded"];
     
-    //instantiaiting counter object
-    NSInteger userCompletedChallengesCounter = [defaults integerForKey:@"counter"];
-    if (userCompletedChallengesCounter) {
-        self.challengeCounter.text = [NSString stringWithFormat:@"%d", userCompletedChallengesCounter];
-    } else {
-        NSInteger challengeCounter = 0;
-        [defaults setInteger:challengeCounter forKey:@"counter"];
-        [defaults synchronize];
-        self.challengeCounter.text = [NSString stringWithFormat:@"%ld", (long)challengeCounter];
-
-        
-    }
-
-    
     if(!userOnBoarded){
         OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"The Journey" body:@"Over the course of 31 days, this app will help create more space in your life. You will recieve a daily challenge that's aimed to make you more mindful, compassionate, and empathetic." image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Let's Do This!" action:^{
             // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
@@ -49,7 +35,7 @@
         firstPage.movesToNextViewController = YES;
         firstPage.underIconPadding = 20;
         
-        OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"The Tools" body:@"To help you, we'll send you two notifications, once in the morning, and once in the evening." image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Agreed" action:^{
+        OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"The Tools" body:@"To help you, we'll send you two notifications, once in the morning, and once in the evening." image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Can't Wait!" action:^{
             
             settingNotificationsModel *notification = [[settingNotificationsModel alloc] init];
             
@@ -59,7 +45,7 @@
         }];
         
         secondPage.movesToNextViewController = YES;
-        OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"The Challenge" body:@"Some of these challenges may be outside of your comfort zone and that's okay. Its important to occasionally push the boundaries of your comfort zone. You will have 24 hours to complete each challenge, starting from the moment you open the application - good luck!" image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Challenge Accepted" action:^{
+        OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"The Challenge" body:@"Some of these challenges may be outside of your comfort zone and that's okay. Its important to occasionally push the boundaries of your comfort zone. You will have 24 hours to complete each challenge, starting from the moment you open the application - good luck!" image:[UIImage imageNamed:@"Icon-76"] buttonText:@"Challenge Accepted." action:^{
             [self dismissViewControllerAnimated:YES completion:nil];
         }];
         
@@ -152,6 +138,7 @@
         }
     }
     
+    //check if completed button should be active
     NSArray *completed = [[NSUserDefaults standardUserDefaults] objectForKey:@"completed"];
     int countForCompleted = [completed count];
     for (int i=0; i < countForCompleted; i++) {
@@ -165,11 +152,21 @@
         }
     }
 
-
+    //instantiaiting counter object to load to the challenge counter
+    NSInteger userCompletedChallengesCounter = [defaults integerForKey:@"counter"];
+    if (userCompletedChallengesCounter) {
+        self.challengeCounter.text = [NSString stringWithFormat:@"%d", userCompletedChallengesCounter];
+    } else {
+        NSInteger challengeCounter = 0;
+        [defaults setInteger:challengeCounter forKey:@"counter"];
+        [defaults synchronize];
+        self.challengeCounter.text = [NSString stringWithFormat:@"%ld", (long)challengeCounter];
+        
+    }
 }
 
 
-
+//this will save to the favorites array, and turn the button to completed
 - (IBAction)favoriteButton:(id)sender {
     [self.heartButton setBackgroundImage:[UIImage imageNamed:@"filledHeart"] forState:UIControlStateDisabled];
     self.heartButton.enabled = NO;
@@ -197,6 +194,7 @@
     [defaults synchronize];
 }
 
+//this will turn the zen button into completed and add one to the counter
 - (IBAction)zenButton:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //changing the background of unchecked button to signify its completed

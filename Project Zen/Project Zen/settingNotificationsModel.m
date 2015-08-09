@@ -14,8 +14,7 @@
 -(void)setNotifications{
     
     NSLog(@"setting notifcations is working");
-    // Schedule the notification
-    //-- Set Notification
+    // Schedule the notification, need to check if current iOS device is above 8.0
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
@@ -27,6 +26,8 @@
          (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
     }
     
+    
+    //Pretty sure this is broken
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setDay:1];
     [comps setHour:8];
