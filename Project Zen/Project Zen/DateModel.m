@@ -26,18 +26,14 @@
 -(double)findChallengeDate:(NSDate*)startingDate
 {
     
-    NSLog (@"start date: %@", startingDate);
-    
-    //testing purposes
-    int daysToAdd = 8;
-    NSDate *newDate1 = [startingDate dateByAddingTimeInterval:60*60*24*daysToAdd];
-    
-    NSLog(@"newdate: %@", newDate1);
-    NSLog(@"current date: %@", [NSDate date]);
-      //THIS IS ONLY FOR TESTING PURPOSES, NEWDATE1 SHOULD BE SWITCHED TO CURRENT DATE
-    differenceInDate = [newDate1 timeIntervalSinceDate: startingDate]/(60*60*24);
-    NSLog(@"differnece in date: %f", differenceInDate);
 
+    //testing purposes
+//    int daysToAdd = 8;
+//    NSDate *newDate1 = [startingDate dateByAddingTimeInterval:60*60*24*daysToAdd];
+//    
+      //THIS IS ONLY FOR TESTING PURPOSES, NEWDATE1 SHOULD BE SWITCHED TO CURRENT DATE
+    differenceInDate = [[NSDate date] timeIntervalSinceDate: startingDate]/(60*60*24);
+   
     return differenceInDate;
   }
 

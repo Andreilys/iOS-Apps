@@ -8,12 +8,12 @@
 
 #import "settingNotificationsModel.h"
 #import "UIKit/UIKit.h"
+#import "DateModel.h"
+#import "ViewController.h"
 
 @implementation settingNotificationsModel
 
 -(void)setNotifications{
-    
-    NSLog(@"setting notifcations is working");
     // Schedule the notification, need to check if current iOS device is above 8.0
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
@@ -27,47 +27,80 @@
     }
     
     
-    //Pretty sure this is broken
-    NSDateComponents *comps = [[NSDateComponents alloc] init];
-    [comps setDay:1];
-    [comps setHour:8];
-    [comps setMinute:00];
-    NSCalendar *gregorian = [[NSCalendar alloc] init];
-    NSDate *date = [gregorian dateFromComponents:comps];
-    
-    
-    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = date;
-    localNotification.alertBody = @"Yolo";
-    localNotification.alertAction = @"Show me the item";
-    localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    localNotification.repeatInterval = NSCalendarUnitDay;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-    
-    
     //setting night notification
-    NSDateComponents *comps1 = [[NSDateComponents alloc] init];
-    [comps1 setDay:1];
-    [comps1 setHour:20];
-    [comps1 setMinute:00];
-    NSCalendar *gregorian1 = [[NSCalendar alloc] init];
-    NSDate *date1 = [gregorian1 dateFromComponents:comps];
-    
-    UILocalNotification* localNightNotification = [[UILocalNotification alloc] init];
-    localNightNotification.fireDate = date1;
-    localNightNotification.alertBody = @"Yolo";
-    localNightNotification.alertAction = @"Show me the item";
-    localNightNotification.timeZone = [NSTimeZone defaultTimeZone];
-    localNightNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    localNightNotification.repeatInterval = NSCalendarUnitDay;
 
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNightNotification];
+    NSDateComponents *currentDate = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+
+
+    //setting day notification
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setYear:[currentDate year]];
+    [comps setMonth:[currentDate month]];
+    [comps setDay:[currentDate day]];
+    [comps setHour:8];
+    [comps setMinute:0];
+    [comps setTimeZone:[NSTimeZone systemTimeZone]];
+    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate *setTime = [cal dateFromComponents:comps];
     
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    localNotif.fireDate = setTime;
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    
+    localNotif.alertBody = @"See what challenge awaits you today on your journey to enlightenment!";
+    // Set the action button
+    localNotif.alertAction = @"View";
+    
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    localNotif.applicationIconBadgeNumber = 1;
+    localNotif.repeatInterval = NSCalendarUnitDay;
+    
+    // Schedule the notification
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+
+    
+    
+//setting night notification, infinite repeat, always at 8pm
+    NSDateComponents *compsNight = [[NSDateComponents alloc] init];
+    [compsNight setYear:[currentDate year]];
+    [compsNight setMonth:[currentDate month]];
+    [compsNight setDay:[currentDate day]];
+    [compsNight setHour:20];
+    [compsNight setMinute:0];
+    [compsNight setTimeZone:[NSTimeZone systemTimeZone]];
+    NSCalendar *calNight = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate *setTimeNight = [calNight dateFromComponents:compsNight];
+    
+    UILocalNotification *localNotifNight = [[UILocalNotification alloc] init];
+    if (localNotifNight == nil)
+        return;
+    localNotifNight.fireDate = setTimeNight;
+    localNotifNight.timeZone = [NSTimeZone defaultTimeZone];
+    
+    // Notification details
+    localNotifNight.alertBody = @"How did it go today? Celebrate your success by recording it, and observe as the presence within you grows.";
+    // Set the action button
+    localNotifNight.alertAction = @"View";
+    
+    localNotifNight.soundName = UILocalNotificationDefaultSoundName;
+    localNotifNight.applicationIconBadgeNumber = 1;
+    localNotifNight.repeatInterval = NSCalendarUnitDay;
+    
+    // Schedule the notification
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotifNight];
+    
+//    This is for testing purposes, don't think I need anymore
+    NSLog(@"%@", localNotifNight);
     UIApplication *app = [UIApplication sharedApplication];
     NSArray *eventArray = [app scheduledLocalNotifications];
     
     NSLog(@"%@", eventArray);
+    
+    
+    NSLog(@"setting notifcations is working");
+
 }
+
 @end

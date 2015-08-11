@@ -49,10 +49,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:10];
-    notification.alertBody = @"24 hours passed since last visit :(";
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
