@@ -38,7 +38,7 @@
     [comps setMonth:[currentDate month]];
     [comps setDay:[currentDate day]];
     [comps setHour:8];
-    [comps setMinute:0];
+    [comps setMinute:00];
     [comps setTimeZone:[NSTimeZone systemTimeZone]];
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *setTime = [cal dateFromComponents:comps];
@@ -68,7 +68,7 @@
     [compsNight setMonth:[currentDate month]];
     [compsNight setDay:[currentDate day]];
     [compsNight setHour:20];
-    [compsNight setMinute:0];
+    [compsNight setMinute:00];
     [compsNight setTimeZone:[NSTimeZone systemTimeZone]];
     NSCalendar *calNight = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *setTimeNight = [calNight dateFromComponents:compsNight];

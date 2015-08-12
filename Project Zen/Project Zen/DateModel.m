@@ -45,34 +45,34 @@
     if (difference < 1) {
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 1:", @"Day",
-                                       @"Admire 5 Trees Today", @"Challenge",
+                                       @"Pause and take a deep breath", @"Challenge",
                                        nil];
         return nextChallenge;
     } else if (difference < 2){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                             @"Day 2:", @"Day",
-                             @"Call Someone and Tell Them You Appreciate Them", @"Challenge",
+                                       @"Admire 5 trees today", @"Challenge",
                              nil];
         return nextChallenge;
     }
     else if (difference < 3){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 3:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Donate 30mins of time to someone else", @"Challenge",
                                        nil];
         return nextChallenge;
     }
     else if (difference < 4){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 4:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @" Give a stranger a compliment", @"Challenge",
                                        nil];
         return nextChallenge;
 
     }else if (difference < 5){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 5:", @"Day",
-                                       @"Meditate Under A Tree", @"Challenge",
+                                       @"Draw a flower", @"Challenge",
                                        nil];
         return nextChallenge;
 
@@ -80,14 +80,14 @@
     else if (difference < 6){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 6:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Write a poem", @"Challenge",
                                        nil];
         return nextChallenge;
 
     }else if (difference < 7){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 7:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Make peace with an enemy", @"Challenge",
                                        nil];
         return nextChallenge;
 
@@ -96,7 +96,7 @@
     else if (difference < 8){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 8:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Do something that scares you", @"Challenge",
                                        nil];
         return nextChallenge;
 
@@ -110,41 +110,41 @@
     } else if (difference < 10){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 10:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Smile at 5 strangers", @"Challenge",
                                        nil];
         return nextChallenge;
         
     } else if (difference < 11){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 11:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Give someone a hug", @"Challenge",
                                        nil];
         return nextChallenge;
         
     } else if (difference < 12){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 12:", @"Day",
-                                       @"Call Someone and Tell Them You Appreciate Them", @"Challenge",
+                                       @"Avoid social media today", @"Challenge",
                                        nil];
         return nextChallenge;}
     else if (difference < 13){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 13:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Laugh enthusiastically", @"Challenge",
                                        nil];
         return nextChallenge;
     }
     else if (difference < 14){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 14:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Smell a flower", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }else if (difference < 15){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 15:", @"Day",
-                                       @"Meditate Under A Tree", @"Challenge",
+                                       @"Eat mindfully, savoring the taste", @"Challenge",
                                        nil];
         return nextChallenge;
         
@@ -152,14 +152,14 @@
     else if (difference < 16){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 16:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"While walking, feel the soles of your feet", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }else if (difference < 17){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 17:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Meditate under a tree", @"Challenge",
                                        nil];
         return nextChallenge;
         
@@ -168,21 +168,21 @@
     else if (difference < 18){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 18:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Spend the day without Internet", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }else if (difference < 19){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 19:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Contemplate your mortality", @"Challenge",
                                        nil];
         return nextChallenge;
         
     } else if (difference < 20){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 20:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Give back to your community", @"Challenge",
                                        nil];
         return nextChallenge;
         
@@ -191,34 +191,34 @@
     else if (difference < 21){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 21:", @"Day",
-                                       @"Call Someone and Tell Them You Appreciate Them", @"Challenge",
+                                       @"Plant a tree", @"Challenge",
                                        nil];
         return nextChallenge;}
     else if (difference < 22){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 22:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Water a garden", @"Challenge",
                                        nil];
         return nextChallenge;
     }
     else if (difference < 23){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 23:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Wash your dishes mindfully", @"Challenge",
                                        nil];
         return nextChallenge;
     }
     else if (difference < 24){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 24:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Eliminate clutter", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }else if (difference < 25){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 25:", @"Day",
-                                       @"Meditate Under A Tree", @"Challenge",
+                                       @"Relinquish control", @"Challenge",
                                        nil];
         return nextChallenge;
         
@@ -226,14 +226,14 @@
     else if (difference < 26){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 26:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Connect with Nature", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }else if (difference < 27){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 27:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Spend 5 minutes being grateful", @"Challenge",
                                        nil];
         return nextChallenge;
         
@@ -242,36 +242,42 @@
     else if (difference < 28){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 28:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Practice self-compassion", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }else if (difference < 29){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 29:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Write a journal post", @"Challenge",
                                        nil];
         return nextChallenge;
         
     } else if (difference < 30){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 30:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Notice 5 things, that go unnoticed", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }  else if (difference < 31){
         NSDictionary *nextChallenge = [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"Day 31:", @"Day",
-                                       @"Donate your time to someone else", @"Challenge",
+                                       @"Show vulnerability in front of a group", @"Challenge",
                                        nil];
         return nextChallenge;
         
     }
     //need to make an alert
     else if (difference <32){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congrats you made it!"
+                                                        message:@"I hope that at the end of these 31 days you've found time to be more at peace with yourself."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
         
-            }
+        [alert show];
+    }
  
 
 

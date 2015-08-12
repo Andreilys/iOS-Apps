@@ -54,7 +54,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
