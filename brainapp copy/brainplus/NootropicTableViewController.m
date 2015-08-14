@@ -211,6 +211,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //setting the height
     return 80;
 }
 
@@ -218,7 +219,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"moreDetails"]) {
-    
+    //this is for checking which nootropic was clicked
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         NSInteger rowSelected = selectedIndexPath.row;
         DetailedViewController *controller = (DetailedViewController *)segue.destinationViewController;
