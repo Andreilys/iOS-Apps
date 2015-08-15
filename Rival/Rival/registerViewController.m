@@ -58,13 +58,7 @@
         errorMessage = @"Please enter a valid email address";
     } else if (![self.passwordTextField.text isValidPassword]){
         viewWithError = self.passwordTextField;
-        viewWithError = self.passwordTextField2;
         errorMessage = @"Please enter a valid password longer than 5 characters.";
-    } else if (![self.passwordTextField.text isEqualToString:self.passwordTextField2.text])
-    {
-        viewWithError = self.passwordTextField;
-        viewWithError = self.passwordTextField2;
-        errorMessage = @"Please double check both password fields.";
     }
     // reset the icon views
     self.userTextField.rightView = nil;
